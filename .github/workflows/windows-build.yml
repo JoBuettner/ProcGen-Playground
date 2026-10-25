@@ -1,0 +1,49 @@
+name: Windows portable development build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  portable:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.10.1'
+          architecture: x64
+      - name: Install hashed dependencies
+        run: |
+          python -m venv .venv
+          if ($LASTEXITCODE -ne 0) { throw 'venv failed' }
+          .\.venv\Scripts\python.exe -m pip install --require-hashes -r requirements-bootstrap.lock
+          if ($LASTEXITCODE -ne 0) { throw 'Bootstrap installation failed' }
+          .\.venv\Scripts\python.exe -m pip install --require-hashes --no-build-isolation -r requirements-windows.lock
+          if ($LASTEXITCODE -ne 0) { throw 'Dependency installation failed' }
+      - name: Test, package, and verify native parity
+        run: .\scripts\build_windows.ps1
+      # Hosted CI cannot establish real desktop keyboard/GUI behavior.
+      # This only uploads a development artifact, never a GitHub release.
+      - name: Upload portable development artifact
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: ProcGenPlayground-Windows-x64-prerelease-GUI-testing-incomplete
+          path: |
+            dist/ProcGenPlayground-Windows-x64-portable.zip
+            dist/ProcGenPlayground-Windows-x64-portable.zip.sha256
+            .artifacts/upstream-smoke.json
+            .artifacts/frozen-verification.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14
