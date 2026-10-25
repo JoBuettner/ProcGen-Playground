@@ -31,19 +31,38 @@ Last updated: 2026-10-25. This is a development build, not a public release.
   not a claim of playing every game with a keyboard.
 - Fresh `.artifacts/lock-env` installation succeeded **offline**, using hashed
   archives, pinned bootstrap tools, and `--no-build-isolation`; `pip check` passed.
-- Initial configuration tests passed (37), runner tests passed (5), and strict
-  mypy passed for all six source modules. Final complete suite still to run.
+- Full unit suite: **42 passed**. Strict mypy passed for all six source modules.
+  These also passed using the fresh offline-installed environment.
 - PyInstaller built a windowed, folder-based standalone EXE with its own Python
   runtime, native libraries, assets, GLFW library, gym3 font/header, and notices.
 - Agent inspected the packaged CoinRun window on the actual desktop, observed
   normal rendering, toggled its original `O` overlay shortcut, and closed it.
-  The application log recorded successful termination. A user check of packaged
-  movement/jump and double-click startup has been requested.
+  The application log recorded successful termination. **The user also confirmed
+  the packaged EXE starts by double-click, movement/jump work, and no console
+  appears.**
 - Unicode extraction initially failed. Fixed by passing the asset-root option
   as UTF-8 bytes, avoiding gym3's string byte-count bug. No upstream files patched.
-- Packaged native parity comparison is running against the 96 upstream cases,
-  after ZIP extraction to a space/non-ASCII path and with Python/environment
-  overrides removed. Do not treat this in-progress run as passed.
+- Packaged native parity comparison: **96/96 passed**, after ZIP extraction to
+  a space/non-ASCII path with Python/environment overrides removed. All **1,290**
+  bundled ProcGen data files match upstream bytes. The PE subsystem is Windows GUI.
+  This automated report does not test GLFW window creation/keyboard input from
+  that extraction path; the separate desktop check below supplies that evidence.
+- Agent launched the ZIP-extracted application from
+  `.artifacts/Portable Prüfung h90y2_i5/ProcGenPlayground/`, observed normal
+  CoinRun rendering, verified the `O` keyboard overlay toggle, and closed it.
+  Logs recorded successful shutdown; subsequent window inventory was empty.
+- Independent standards review found no actionable violations or smells. Spec
+  review found no correctness violations and called out the separate Unicode
+  path desktop check. See `docs/verification/REVIEW.md`.
+- Development ZIP: **84,309,452 bytes (80.4 MiB)**; application folder:
+  **184,219,869 bytes (175.7 MiB)**. SHA-256:
+  `040926ea82365d556930be37ce4ee1f6be92043097f2dac2d39bf22a14ec4364`.
+  Committed frozen report: `docs/verification/frozen-smoke-2026-10-25.json`.
+- A final end-to-end build-script run in the fresh environment passed `pip
+  check`, all 42 tests, type checking, and notice collection. It was interrupted
+  during the upstream native matrix after the user stopped Computer Use with
+  Escape. It did not replace the previously validated portable ZIP. The script
+  as a whole is therefore **not yet recorded as successfully executed**.
 
 ## Remaining gates and deferred work
 
@@ -52,7 +71,11 @@ Last updated: 2026-10-25. This is a development build, not a public release.
 - Representative original CaveFlyer and Heist/Maze keyboard controls remain
   unchecked; their native configuration/stepping checks passed.
 - GUI agent/human view switching and visual toggles need manual validation.
-- Finish packaged parity checks, final unit tests, review, and build records.
+- Complete an uninterrupted `scripts/build_windows.ps1` run. Individual native,
+  packaging, parity, and unit/type commands have passed as recorded above.
+- Missing-library GUI error handling has unit coverage, but the desktop error
+  dialog check was stopped before verification; the temporary DLL rename in a
+  disposable extraction was restored. No failure-dialog pass is claimed.
 - Native Qt/C++ redistribution compliance audit remains open. Asset notices and
   installed distribution/Python/Tcl/Tk license files are collected and bundled.
 - GitHub remote is not configured. No public release or installer exists, and
