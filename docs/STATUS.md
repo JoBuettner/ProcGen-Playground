@@ -5,12 +5,18 @@ Last updated: 2026-10-25. This is a development build, not a public release.
 ## Milestones
 
 - [x] M0 feasibility gate: original CoinRun playable on this Windows desktop
-- [ ] M1: standalone portable CoinRun executable verified on a clean desktop
+- [x] M1: standalone portable CoinRun executable verified on the current PC
 - [ ] M2: launcher and all 16 games
 - [ ] M3: hardening and reproducible Windows build
 - [ ] M4: installer and public release
 
 ## Verified evidence
+
+**Updated sequencing agreed with the user:** the successful gameplay test was
+on the current PC. Separate-PC / no-Python verification is deferred until final
+release validation, and does not block launcher/installer development. This
+overrides the original plan's clean-machine prerequisite for moving past M1.
+It does not mean that the separate-PC test has passed.
 
 - Initialized local Git repository; original plan committed as `61ed086`.
 - Host has CPython 3.10.1, 64-bit AMD64 on Windows
@@ -80,8 +86,9 @@ Last updated: 2026-10-25. This is a development build, not a public release.
   installed distribution/Python/Tcl/Tk license files are collected and bundled.
 - GitHub remote is not configured. No public release or installer exists, and
   CI has not run on GitHub. A local workflow is not evidence of CI success.
-- Per the plan, the polished M2 launcher and M4 installer/publication wait for
-  the standalone gate. CLI options/configuration are minimal M1 test support.
+- M2 launcher implementation is underway: all 16 games, supported settings,
+  separate packaged game child, single-instance policy, and Windows process
+  ownership. Fresh packaged/desktop verification is required before claiming M2.
 
 ## Failures and resolutions
 

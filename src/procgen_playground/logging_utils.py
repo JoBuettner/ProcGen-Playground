@@ -30,15 +30,15 @@ class LogStream:
             handler.flush()
 
 
-def configure_logging() -> Path:
+def configure_logging(role: str = "playground") -> Path:
     directory = log_directory()
     directory.mkdir(parents=True, exist_ok=True)
-    path = directory / "playground.log"
+    path = directory / f"{role}.log"
     handler = RotatingFileHandler(path, maxBytes=2_000_000, backupCount=2, encoding="utf-8")
     logging.basicConfig(level=logging.INFO, handlers=[handler],
                         format="%(asctime)s %(levelname)s %(name)s: %(message)s", force=True)
-    if sys.stdout is None:
+    if sys.stdout is None or getattr(sys, "frozen", False):
         sys.stdout = LogStream(logging.INFO)
-    if sys.stderr is None:
+    if sys.stderr is None or getattr(sys, "frozen", False):
         sys.stderr = LogStream(logging.WARNING)
     return path

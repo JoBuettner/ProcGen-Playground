@@ -2,11 +2,7 @@
 
 from dataclasses import dataclass
 
-GAME_IDS = (
-    "bigfish", "bossfight", "caveflyer", "chaser", "climber", "coinrun",
-    "dodgeball", "fruitbot", "heist", "jumper", "leaper", "maze", "miner",
-    "ninja", "plunder", "starpilot",
-)
+from .games import GAME_IDS as GAME_IDS
 
 
 @dataclass(frozen=True)

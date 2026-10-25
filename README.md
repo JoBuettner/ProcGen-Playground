@@ -3,16 +3,25 @@
 Play the original 16 ProcGen games through an independent Windows desktop app.
 This project is not an official OpenAI product.
 
-**Development / prerelease:** the current M1 build opens CoinRun directly.
-A game-selection launcher is planned after standalone packaging is validated.
+**Development / prerelease:** the launcher offers all 16 original games.
 Clean-machine GUI verification is still required; see [status](docs/STATUS.md).
 
 ## Play a development portable build
 
 1. Extract the entire `ProcGenPlayground-Windows-x64-portable.zip`.
 2. Open the extracted `ProcGenPlayground` folder.
-3. Double-click `ProcGenPlayground.exe` to open CoinRun.
-4. Close the game window to quit.
+3. Double-click `ProcGenPlayground.exe`, choose a game, and press **Play**.
+4. Close the game window to return to the launcher and choose another game.
+
+Choose **Easy** or **Hard**, leave the level seed empty for procedural levels
+or enter a number to repeat one level, and select **Human** or **Agent observation**
+view. Backgrounds, theme restriction, and monochrome assets use upstream options.
+The initial defaults are CoinRun, Hard, Human, and standard visuals.
+
+One launcher and one game run at a time. **Stop game** returns to the menu;
+**Exit** or closing the launcher also stops its game. Selections stay in the
+current launcher session; preferences are not written to the installation folder.
+Keyboard: Tab navigates controls; Alt+P plays, Alt+S stops, and Alt+X exits.
 
 You do not need Python, a terminal, or an internet connection to play.
 Requirements: Windows x64, AVX-capable processor, and an OpenGL 3.3 graphics
@@ -30,7 +39,7 @@ upstream overlay. See the [upstream game descriptions](https://github.com/openai
 ## Troubleshooting
 
 Startup failures show a dialog when possible. Logs are stored per user at
-`%LOCALAPPDATA%\ProcGenPlayground\logs\playground.log`, with bounded rotation.
+`%LOCALAPPDATA%\ProcGenPlayground\logs\launcher.log` and `game.log`, with bounded rotation.
 Extract all files together; do not move the executable away from `_internal`.
 The app never downloads dependencies or compiles the engine at runtime.
 

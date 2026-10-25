@@ -5,9 +5,10 @@ from procgen_playground.__main__ import parse_arguments
 
 
 def test_defaults_match_original_interactive_mode():
-    config, report = parse_arguments([])
+    config, report, run_game = parse_arguments([])
     assert config == LaunchConfig(game="coinrun", difficulty="hard", vision="human")
     assert report is None
+    assert run_game is False
     assert config.environment_options() == {
         "env_name": "coinrun", "distribution_mode": "hard",
         "use_backgrounds": True, "restrict_themes": False,
@@ -18,7 +19,7 @@ def test_defaults_match_original_interactive_mode():
 
 @pytest.mark.parametrize("game", GAME_IDS)
 def test_all_standard_games_are_accepted(game):
-    config, _ = parse_arguments(["--game", game])
+    config, _, _ = parse_arguments(["--game", game])
     assert config.environment_options()["env_name"] == game
 
 
@@ -49,7 +50,7 @@ def test_invalid_configuration_rejected_before_native_start(kwargs):
 
 
 def test_cli_visual_options_map_to_upstream():
-    config, _ = parse_arguments([
+    config, _, _ = parse_arguments([
         "--game", "heist", "--difficulty", "easy", "--vision", "agent",
         "--level-seed", "0", "--disable-backgrounds", "--restrict-themes", "--monochrome",
     ])

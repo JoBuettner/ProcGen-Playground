@@ -79,9 +79,18 @@ $env:PYTHONPATH = (Join-Path (Get-Location) 'src')
 
 Developer options are `--game`, `--difficulty easy|hard`, `--vision human|agent`,
 `--level-seed`, `--disable-backgrounds`, `--restrict-themes`, and `--monochrome`.
-No arguments opens CoinRun in hard mode with normal visuals and human view.
+No arguments opens the launcher with CoinRun, hard mode, normal visuals, and
+human view selected. The internal `--run-game` mode opens the selected original
+interactive game directly; the launcher uses the same packaged EXE for this
+child, never an external Python installation. Source development uses the same
+interpreter with `-m procgen_playground` and an explicit source path.
 The internal `--verify-engine REPORT_JSON` mode runs a finite native check
 without a game window; its deterministic RNG seed is used only for diagnostics.
+
+The launcher allows a single instance per user with an OS-backed file lock.
+Gameplay runs in one child process. A Windows kill-on-close Job Object owns the
+child; normal launcher closure terminates and reaps it, and the job is also a
+backstop if the launcher exits unexpectedly after assigning the child.
 
 Empty/unset level seed leaves ProcGen's unlimited procedural generation
 defaults. A seed selects `start_level=seed, num_levels=1`. It does not by itself

@@ -1,4 +1,4 @@
-"""Minimal M1 entry point: double-click opens original CoinRun directly."""
+"""Dispatch the launcher, an internal game child, or finite native verification."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from typing import NoReturn
 
 from . import __version__
 from .config import GAME_IDS, LaunchConfig
-from .logging_utils import configure_logging
+from .logging_utils import configure_logging, log_directory
 
 
 class ArgumentParser(argparse.ArgumentParser):
@@ -19,7 +19,7 @@ class ArgumentParser(argparse.ArgumentParser):
         raise ValueError(message)
 
 
-def parse_arguments(argv: list[str] | None = None) -> tuple[LaunchConfig, Path | None]:
+def parse_arguments(argv: list[str] | None = None) -> tuple[LaunchConfig, Path | None, bool]:
     parser = ArgumentParser(description="Play the original ProcGen environments.")
     parser.add_argument("--version", action="version", version=__version__)
     parser.add_argument("--game", choices=GAME_IDS, default="coinrun")
@@ -29,7 +29,9 @@ def parse_arguments(argv: list[str] | None = None) -> tuple[LaunchConfig, Path |
     parser.add_argument("--disable-backgrounds", action="store_true")
     parser.add_argument("--restrict-themes", action="store_true")
     parser.add_argument("--monochrome", action="store_true")
-    parser.add_argument("--verify-engine", type=Path, metavar="REPORT_JSON",
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--run-game", action="store_true", help=argparse.SUPPRESS)
+    mode.add_argument("--verify-engine", type=Path, metavar="REPORT_JSON",
                         help="write a finite native check report instead of opening a window")
     args = parser.parse_args(argv)
     config = LaunchConfig(
@@ -37,7 +39,7 @@ def parse_arguments(argv: list[str] | None = None) -> tuple[LaunchConfig, Path |
         level_seed=args.level_seed, backgrounds=not args.disable_backgrounds,
         restrict_themes=args.restrict_themes, monochrome=args.monochrome,
     )
-    return config, args.verify_engine
+    return config, args.verify_engine, args.run_game
 
 
 def show_error(message: str) -> None:
@@ -53,9 +55,16 @@ def show_error(message: str) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     log_path: Path | None = None
+    run_game_mode = False
     try:
-        log_path = configure_logging()
-        config, report = parse_arguments(argv)
+        config, report, run_game_mode = parse_arguments(argv)
+        if not run_game_mode and report is None:
+            from .launcher import run_launcher
+
+            log_path = log_directory() / "launcher.log"
+            run_launcher(config)
+            return 0
+        log_path = configure_logging("game" if run_game_mode else "verification")
         logging.info("ProcGen Playground %s; frozen=%s; %s", __version__,
                      bool(getattr(sys, "frozen", False)), config)
         if report is not None:
@@ -64,7 +73,7 @@ def main(argv: list[str] | None = None) -> int:
             result = verify_engine(config)
             report.parent.mkdir(parents=True, exist_ok=True)
             report.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-        else:
+        elif run_game_mode:
             from .game_runner import run_game
 
             run_game(config)
@@ -76,10 +85,13 @@ def main(argv: list[str] | None = None) -> int:
                    "The games require Windows x64, an AVX-capable CPU, and OpenGL 3.3.")
         if log_path:
             message += f"\n\nDetails: {log_path}"
-        try:
-            show_error(message)
-        except Exception:
-            logging.exception("Could not display the error dialog")
+        # The launcher observes a child's exit and shows its error, avoiding
+        # duplicate dialogs or a child waiting forever on an unseen modal.
+        if not run_game_mode:
+            try:
+                show_error(message)
+            except Exception:
+                logging.exception("Could not display the error dialog")
         return 1
 
 
