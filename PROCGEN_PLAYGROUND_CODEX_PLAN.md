@@ -1,5 +1,11 @@
 # ProcGen Playground: Codex Implementation Plan
 
+> **Scope/sequencing update, 2026-10-25 (user decision):** distribute the portable
+> ZIP only; no installer is needed. Full desktop acceptance of all games and
+> the separate-PC/no-Python test happen at the end of development. These decisions
+> override installer work and earlier clean-machine milestone prerequisites below.
+> Current progress: `docs/STATUS.md`; dependency obligations: `docs/LICENSE-AUDIT.md`.
+
 ## 1. Project brief
 
 Build **ProcGen Playground**, an independent, open-source desktop application that lets nontechnical users play the original 16 [OpenAI ProcGen](https://github.com/openai/procgen) games without installing Python, opening a terminal, or compiling anything. Start with **Windows x64** and distribute a portable ZIP containing an executable that can be launched by double-clicking. After that works, add a friendly launcher, an optional Windows installer, and automated GitHub releases. A browser version is a possible later project, not part of the current scope.

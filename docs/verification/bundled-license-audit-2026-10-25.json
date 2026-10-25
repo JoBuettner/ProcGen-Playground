@@ -1,0 +1,675 @@
+{
+  "version": "0.2.0.dev0",
+  "date": "2026-10-25",
+  "public_redistribution_cleared": false,
+  "ffmpeg_executable_present": false,
+  "native_file_count": 99,
+  "native_files": [
+    {
+      "path": "_internal/_asyncio.pyd",
+      "bytes": 60656,
+      "sha256": "3ea0d07f4a434c172655e6e8012339486368d355c542606bc1bcbe0cabd7f874",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_asyncio.pyd"
+    },
+    {
+      "path": "_internal/_bz2.pyd",
+      "bytes": 80112,
+      "sha256": "4b1d29f19adaf856727fa4a1f50eee0a86c893038dfba2e52f26c11ab5b3672f",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_bz2.pyd"
+    },
+    {
+      "path": "_internal/_cffi_backend.cp310-win_amd64.pyd",
+      "bytes": 178176,
+      "sha256": "4f1ce205c2be986c9d38b951b6bcb6045eb363e06dacc069a41941f80be9068c",
+      "origin": "Pinned wheel / _cffi_backend.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/_ctypes.pyd",
+      "bytes": 119024,
+      "sha256": "e3b69285f27a8ad97555bebea29628a93333de203ee2fae95b73b6b6d6c162b1",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_ctypes.pyd"
+    },
+    {
+      "path": "_internal/_decimal.pyd",
+      "bytes": 247024,
+      "sha256": "f7864b8b37715a87f4f11d5cbfefd5f1489399e064f7662fa0e0d7c5df59d5e4",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_decimal.pyd"
+    },
+    {
+      "path": "_internal/_elementtree.pyd",
+      "bytes": 122088,
+      "sha256": "f93b90abffb837fd024e2a9a5dec8c9c79b275ae128065dac7623a2f9d974319",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_elementtree.pyd"
+    },
+    {
+      "path": "_internal/_hashlib.pyd",
+      "bytes": 59120,
+      "sha256": "df47255c100d9cc033a14c7d60051abe89c24da9c60362fe33cdf24c19651f7c",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_hashlib.pyd"
+    },
+    {
+      "path": "_internal/_lzma.pyd",
+      "bytes": 153328,
+      "sha256": "2e3fd65c4e02c99a61344ce59e09ec7fde74c671db5f82a891732e1140910f20",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_lzma.pyd"
+    },
+    {
+      "path": "_internal/_multiprocessing.pyd",
+      "bytes": 29928,
+      "sha256": "589c601f278025d8b3d4c8b17abbb962501e5057f250a0399a2a93300b3a7ffc",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_multiprocessing.pyd"
+    },
+    {
+      "path": "_internal/_overlapped.pyd",
+      "bytes": 45296,
+      "sha256": "155401462e95dbb1a6e45b0c0ffe0549f682bfeec39d4bb02c46c4cce5560cac",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_overlapped.pyd"
+    },
+    {
+      "path": "_internal/_queue.pyd",
+      "bytes": 26856,
+      "sha256": "9ad5bcf2a88e1ffff3b8ee29235dc92ce48b7fca4655e87cb6e4d71bd1150afb",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_queue.pyd"
+    },
+    {
+      "path": "_internal/_socket.pyd",
+      "bytes": 74480,
+      "sha256": "d0497b79345b2c255f6274baea6ac44b74f345e111ab25bf6c91af9b2a3f3b95",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_socket.pyd"
+    },
+    {
+      "path": "_internal/_sqlite3.pyd",
+      "bytes": 93928,
+      "sha256": "89d32e0206c06cdd196c1dc97a7540d8893eb31ec4703c996494ac68ca62dc7d",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_sqlite3.pyd"
+    },
+    {
+      "path": "_internal/_ssl.pyd",
+      "bytes": 155888,
+      "sha256": "ba6025ab22d8e6c5ad53c66dc919f219a542e87540502905609b33dc0a8dddd8",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_ssl.pyd"
+    },
+    {
+      "path": "_internal/_tkinter.pyd",
+      "bytes": 61160,
+      "sha256": "e616f850e6905d5f5f1c821a5c39360090444555c1444f97bd2313f4cb99aaf4",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_tkinter.pyd"
+    },
+    {
+      "path": "_internal/_uuid.pyd",
+      "bytes": 20720,
+      "sha256": "fe822f84185005b2f84189b51226a3591693ec7c936c2fc009139c36493f4cd8",
+      "origin": "Installed CPython 3.10.1 / DLLs\\_uuid.pyd"
+    },
+    {
+      "path": "_internal/api-ms-win-core-console-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "015bd08815c7b934a8952c3a7578e9ce59f21136e8a880d42bbd414bec2c6058",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-console-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-datetime-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "5534812cdbdae94ba45cb216e5eb9af686b853948df54365103555abbbaf9d9a",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-datetime-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-debug-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "837d2b1b2cd03e03fc6ccb050698b6b5763af17c201304872342a5eae9e0a2d2",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-errorhandling-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "de43b165f568c276c00e95acd454e3092f352a18e95874595f4f4658c06d2ec7",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-fibers-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "3cebc45bf479ad74cfabf2c6bfd4994d7ad639ed1221025981d19cedf9ce0416",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-fibers-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-fibers-l1-1-1.dll",
+      "bytes": 22872,
+      "sha256": "5ef70308bcca628ce6b0e2856b15b1c7ae340c3f9bbbc4c1071d8c191a34a5c3",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-fibers-l1-1-1.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-file-l1-1-0.dll",
+      "bytes": 27008,
+      "sha256": "250ac829f2617bcac1c6e5b8c4f630462e20765863ba573526a3e11bbfb94a9a",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-file-l1-2-0.dll",
+      "bytes": 22888,
+      "sha256": "ae14079a114733f60ce87b92cba42acd8083c2cd67594e53bc37dc0b97a4b465",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-file-l1-2-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-file-l2-1-0.dll",
+      "bytes": 22912,
+      "sha256": "914bf26a298713119477ea0a8e7bd43171b91344ebe24fb47ad77c49686e3d87",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-file-l2-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-handle-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "ab5489955e371b15f77906c08ec3c7affe2c7a46a08c514ca628768b4478974b",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-heap-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "c70f9644d8377fa39c5b71f2e9734c1400d7598904fdeb772e8502099982dcb7",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-heap-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-interlocked-l1-1-0.dll",
+      "bytes": 22888,
+      "sha256": "f8129710188e407bb0e6f46d30aeba277d67b947ece5fe09e883fde2323f3ae6",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+      "bytes": 22888,
+      "sha256": "5200b16cb2ddc61cfc07373a9a84aa85a3ab50806ca96c879c883275832944c1",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-kernel32-legacy-l1-1-1.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-libraryloader-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "48786fb88b001dcd1f63acea903d3ca9cc0b3060d5a325e3f2f3cbc3bfd53166",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-libraryloader-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-localization-l1-2-0.dll",
+      "bytes": 22872,
+      "sha256": "9ec3898f7eba91faa28b51616c211a2689e3a13aeef8de6e13cb674e49d689eb",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-memory-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "3a6cbc524c99e1cd80d5368f5601402a37ad602528b1ab628093573ef638eb3b",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-memory-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-namedpipe-l1-1-0.dll",
+      "bytes": 22888,
+      "sha256": "97145ef89c44949fcf0f04ac834a8bc7d687ef49ee73ae9fc32f3c11136b7201",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-namedpipe-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-processenvironment-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "8bc7c10b1851aea644e9c9f381cdb935e091fee6b0be3d3aedc6fffaac96adb7",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-processenvironment-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-processthreads-l1-1-0.dll",
+      "bytes": 22912,
+      "sha256": "d8030b777617c71f0f94564607699dbf7561487d779db9756aed378c5675213f",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-processthreads-l1-1-1.dll",
+      "bytes": 22872,
+      "sha256": "f5e676713340f73a03a3d41a6ec9883b431da7d16c7f07bd0a920fb80e6c0753",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-profile-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "f023d47e44d3eea6b0743580f57e8c6ba81e79d5ebfa7da26250076c647b980e",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "bytes": 22888,
+      "sha256": "9746d8930704153578a628c010638a5f818ffe5a927e25591b108e256dc6afca",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-string-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "7c53ae24c982d16ffd1bf7f918d115b11b7f30e57bc7feaa18cb9781e4abb926",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-synch-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "56d9d62ca5dba79a6581b8d574a7d8b2a64a5ecb71e47dcf06ed0285708b1859",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-synch-l1-2-0.dll",
+      "bytes": 22888,
+      "sha256": "f6482bbec5612c39ecb4822787a333f2b7570f7a5f922a4059be41ba957bb372",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-sysinfo-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "272d02765fdd3582618236c2d309abba069642f9bc1062ede069d0c144e17007",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-sysinfo-l1-2-0.dll",
+      "bytes": 22912,
+      "sha256": "8a0900788859d0eb51c2f48f50cc6ed376a120b518100fa20e11d7702ccde260",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-sysinfo-l1-2-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-timezone-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "ff35de6c03812b332e140f17dade25c5dd4775156da9eeb1eaae3fddd27236ec",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-timezone-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-core-util-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "191ef3e98641a57296f19d572d8eb62489470ff1ef6030d136af170c2f835173",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-conio-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "54ee5ec719a051496ff60aa00dbeaa94b9a7d2cdac27fe9b7317f1a666b6a2aa",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-conio-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-convert-l1-1-0.dll",
+      "bytes": 26992,
+      "sha256": "8b94662429171019fcd63c70bbf2095a075170599704a5e7dcdbe3da13f3a429",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-environment-l1-1-0.dll",
+      "bytes": 22912,
+      "sha256": "39e5929593709e8af3bc9e0a75ec1155778d6f4a247f4cdfc58928ad6db88434",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-environment-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-filesystem-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "5a8ecebac32edf4e1f3c5c6c1c8ea1a1add6cda4f9c9cb26f752fb295bea6865",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-filesystem-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-heap-l1-1-0.dll",
+      "bytes": 22872,
+      "sha256": "c71080cbcb43bf1f8f3e391deb12a582eb0abefc80946f340675a2c616e4feb4",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-locale-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "6c68648e524187e03c4ad9aaa4a99113c6ee9f29fb39cc0ed93f951975138e63",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-locale-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-math-l1-1-0.dll",
+      "bytes": 31064,
+      "sha256": "d4fbcccbe29371cbce431e43b2eb4f7ba9a6f04a3d740a071f02457a505e9dc8",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-private-l1-1-0.dll",
+      "bytes": 76120,
+      "sha256": "29bf3d90617d3781d19b332d6ceb9f20ba5ce082ec74bf6c34d5d4aee56e48a1",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-private-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-process-l1-1-0.dll",
+      "bytes": 22896,
+      "sha256": "47c1935942e3ac0812e4dcf18c0e265e565f0194a3349111c299712f5565f7ac",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-process-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-runtime-l1-1-0.dll",
+      "bytes": 26968,
+      "sha256": "72adc1b3677e0814d9c4ebf0964000e84bb2acf67336c8963061665e44f78029",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-stdio-l1-1-0.dll",
+      "bytes": 26968,
+      "sha256": "900afc3989673c9bb1a687ed38c192f46db9e6ba6d11a668898a539e7fc23798",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-string-l1-1-0.dll",
+      "bytes": 26968,
+      "sha256": "fcf12466cc12fd3b73611fc0763a5a1f9d44e90349513c34a0c83b0f36421793",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-time-l1-1-0.dll",
+      "bytes": 22912,
+      "sha256": "886e57c4a6adb299b38f02945369f590a67da4e79a798359fc60aaa067212d7c",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-time-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/api-ms-win-crt-utility-l1-1-0.dll",
+      "bytes": 22912,
+      "sha256": "5f8f26b216ade615b67a41f6fbbb910972fc6153315a65bb8f09912be50215b1",
+      "origin": "Builder PATH: Codex cached libheif runtime / api-ms-win-crt-utility-l1-1-0.dll"
+    },
+    {
+      "path": "_internal/glcontext/wgl.cp310-win_amd64.pyd",
+      "bytes": 15360,
+      "sha256": "ed6cb98682f57ba9e4de11b1eb85c2d6c0ccab7b6ea9a95cd06a0564763c74dc",
+      "origin": "Pinned wheel / glcontext\\wgl.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/glfw/glfw3.dll",
+      "bytes": 221696,
+      "sha256": "38d0ca964c3633b42e0bb7d02a8b58bbd851e1fbbe2084562db0fb6492760354",
+      "imports": [
+        "KERNEL32.dll",
+        "USER32.dll",
+        "GDI32.dll",
+        "SHELL32.dll",
+        "MSVCR110.dll"
+      ],
+      "origin": "Pinned wheel / glfw\\glfw3.dll"
+    },
+    {
+      "path": "_internal/glfw/msvcr110.dll",
+      "bytes": 838096,
+      "sha256": "b96acfdd255086a0fe31cb12d47db1e8bc0690d56a4ada4c7bc82b3eb2cab51a",
+      "origin": "Pinned wheel / glfw\\msvcr110.dll"
+    },
+    {
+      "path": "_internal/libcrypto-1_1.dll",
+      "bytes": 3429624,
+      "sha256": "664c3e52f914e351bb8a66ce2465ee0d40acab1d2a6b3167ae6acf6f1d1724d2",
+      "origin": "Installed CPython 3.10.1 / DLLs\\libcrypto-1_1.dll"
+    },
+    {
+      "path": "_internal/libffi-7.dll",
+      "bytes": 32792,
+      "sha256": "f60dd9f2fcbd495674dfc1555effb710eb081fc7d4cae5fa58c438ab50405081",
+      "origin": "Installed CPython 3.10.1 / DLLs\\libffi-7.dll"
+    },
+    {
+      "path": "_internal/libssl-1_1.dll",
+      "bytes": 695032,
+      "sha256": "b7c0e42c1a60a2a062b899c8d4ebd0c50ef956177ba21785ce07c517c143aeaf",
+      "origin": "Installed CPython 3.10.1 / DLLs\\libssl-1_1.dll"
+    },
+    {
+      "path": "_internal/moderngl/mgl.cp310-win_amd64.pyd",
+      "bytes": 165376,
+      "sha256": "46345aee38d47c33c29497bfb2fe180afe1571eeb94497ef2a6eab6b0fd6bffb",
+      "origin": "Pinned wheel / moderngl\\mgl.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/MSVCP140.dll",
+      "bytes": 643512,
+      "sha256": "7c26614e1d733892c2deac7e245ce115504b1d80592dd0a01b08e3e5a55f89ca",
+      "origin": "Builder PATH: Codex cached libheif runtime / MSVCP140.dll"
+    },
+    {
+      "path": "_internal/numpy/core/_multiarray_tests.cp310-win_amd64.pyd",
+      "bytes": 65024,
+      "sha256": "03ad7f7642ff3e63686c64f4e82bfb20459feda8f0f8a209bbb443567edd0a18",
+      "origin": "Pinned wheel / numpy\\core\\_multiarray_tests.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/core/_multiarray_umath.cp310-win_amd64.pyd",
+      "bytes": 2836480,
+      "sha256": "18cfaaff3a73ae7972b8a3707cf20fa58c36641bad0ad3406195c091d54b80fe",
+      "origin": "Pinned wheel / numpy\\core\\_multiarray_umath.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/fft/_pocketfft_internal.cp310-win_amd64.pyd",
+      "bytes": 110080,
+      "sha256": "f427bda65498f685dbc073af03900c35231c5b9f472f310eb03e7f156ffbb9e9",
+      "origin": "Pinned wheel / numpy\\fft\\_pocketfft_internal.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/linalg/_umath_linalg.cp310-win_amd64.pyd",
+      "bytes": 106496,
+      "sha256": "7699acfd30754298e74b4c5fa4a0b3eb273259620adfe79697c267479c7064b9",
+      "origin": "Pinned wheel / numpy\\linalg\\_umath_linalg.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/_bounded_integers.cp310-win_amd64.pyd",
+      "bytes": 257024,
+      "sha256": "9c92722d8bc45cec75cfa9e950ffa252423eb635f25a4827e0de3bc9cdd48e0d",
+      "origin": "Pinned wheel / numpy\\random\\_bounded_integers.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/_common.cp310-win_amd64.pyd",
+      "bytes": 173568,
+      "sha256": "e27fa7bc227909592f2e794ecff5392f0929b22c2adc2bf1080e3cf2280b215d",
+      "origin": "Pinned wheel / numpy\\random\\_common.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/_generator.cp310-win_amd64.pyd",
+      "bytes": 693248,
+      "sha256": "01b757cc35b3cb6dfef148b1f4b3f30bd5ee8fa89ab7f1e83255abde82880a64",
+      "origin": "Pinned wheel / numpy\\random\\_generator.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/_mt19937.cp310-win_amd64.pyd",
+      "bytes": 76288,
+      "sha256": "68f43972832b086d22706d9fcb722efcaf8767f2390a87eb0c38ae4f312fa11d",
+      "origin": "Pinned wheel / numpy\\random\\_mt19937.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/_pcg64.cp310-win_amd64.pyd",
+      "bytes": 83456,
+      "sha256": "aa3c88741139f30391c3ac7fcfb8c6c28f9437f362b36206d2f1008c4dca8b4b",
+      "origin": "Pinned wheel / numpy\\random\\_pcg64.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/_philox.cp310-win_amd64.pyd",
+      "bytes": 69632,
+      "sha256": "616efd37524b4fd76c537788b7899a1b8fea4dca427770f97104898aad1084a1",
+      "origin": "Pinned wheel / numpy\\random\\_philox.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/_sfc64.cp310-win_amd64.pyd",
+      "bytes": 50688,
+      "sha256": "2339e313c992abe56f22e9125d795fa1647b3b62ed6c7ed0069f8b8bb73b1701",
+      "origin": "Pinned wheel / numpy\\random\\_sfc64.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/bit_generator.cp310-win_amd64.pyd",
+      "bytes": 163840,
+      "sha256": "e72e9b51542a63376f43d15a7bd9d5b2700b058285e17a5a97a79cb5e0fb0aaf",
+      "origin": "Pinned wheel / numpy\\random\\bit_generator.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy/random/mtrand.cp310-win_amd64.pyd",
+      "bytes": 595968,
+      "sha256": "d7599d4b503aa549e21594ff26537981daba7fab3f3a24e2b73dc87abdb22f39",
+      "origin": "Pinned wheel / numpy\\random\\mtrand.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/numpy.libs/libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+      "bytes": 38168576,
+      "sha256": "57b87772bf676b5c2d718c79dddc9f039d79ec3319fee1398cc305adff7b69e5",
+      "imports": [
+        "KERNEL32.dll",
+        "api-ms-win-crt-conio-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll"
+      ],
+      "origin": "Pinned wheel / numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll"
+    },
+    {
+      "path": "_internal/PIL/_avif.cp310-win_amd64.pyd",
+      "bytes": 7893504,
+      "sha256": "df0c617422668f1b1b5eece35a0689183942402a16632689d60c3d6488679bc8",
+      "origin": "Pinned wheel / PIL\\_avif.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/PIL/_imaging.cp310-win_amd64.pyd",
+      "bytes": 2632192,
+      "sha256": "16a7c881fd3624c8428078ce24460861e91fc5cc43de1b3614dc2531fe327e2e",
+      "origin": "Pinned wheel / PIL\\_imaging.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/PIL/_imagingcms.cp310-win_amd64.pyd",
+      "bytes": 273408,
+      "sha256": "c92c55b43a774b8787a040afdd70c1c086daad5780c73efb35b029c219a03d5f",
+      "origin": "Pinned wheel / PIL\\_imagingcms.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/PIL/_imagingmath.cp310-win_amd64.pyd",
+      "bytes": 21504,
+      "sha256": "91dbb83922daaa0a601b8a8282be60ebf7633a5b743565c3b579fcafda9b9094",
+      "origin": "Pinned wheel / PIL\\_imagingmath.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/PIL/_imagingtk.cp310-win_amd64.pyd",
+      "bytes": 14848,
+      "sha256": "832f6a7f22092fdc7962842170ebadd6ab844dc1f7b4d5582cdf547217ab00be",
+      "origin": "Pinned wheel / PIL\\_imagingtk.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/PIL/_webp.cp310-win_amd64.pyd",
+      "bytes": 416256,
+      "sha256": "b2b263bd00abe0c1c120efca36f8050c161ce6dbbdb20bf940cc874cae01bac2",
+      "origin": "Pinned wheel / PIL\\_webp.cp310-win_amd64.pyd"
+    },
+    {
+      "path": "_internal/procgen/data/prebuilt/env.dll",
+      "bytes": 10621440,
+      "sha256": "c4396f2f60405bae84863b8cefa441a869ed819d5daab4673fafacadd4bc97ff",
+      "imports": [
+        "NETAPI32.dll",
+        "USERENV.dll",
+        "VERSION.dll",
+        "WS2_32.dll",
+        "KERNEL32.dll",
+        "USER32.dll",
+        "SHELL32.dll",
+        "ole32.dll",
+        "ADVAPI32.dll",
+        "WINMM.dll",
+        "MSVCP140.dll",
+        "VCRUNTIME140.dll",
+        "VCRUNTIME140_1.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll"
+      ],
+      "origin": "Pinned wheel / procgen\\data\\prebuilt\\env.dll"
+    },
+    {
+      "path": "_internal/pyexpat.pyd",
+      "bytes": 191728,
+      "sha256": "66b14ebdd917f046315b666f841ea54a32760ecd624863071da8d3f1fd24459b",
+      "origin": "Installed CPython 3.10.1 / DLLs\\pyexpat.pyd"
+    },
+    {
+      "path": "_internal/python310.dll",
+      "bytes": 4471024,
+      "sha256": "34f0e44a0d089587e1ea48c1cc4c3164a1819c6db27a7c1b746af46d6388c26e",
+      "imports": [
+        "VERSION.dll",
+        "WS2_32.dll",
+        "api-ms-win-core-path-l1-1-0.dll",
+        "ADVAPI32.dll",
+        "KERNEL32.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-process-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-conio-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll"
+      ],
+      "origin": "Installed CPython 3.10.1 / python310.dll"
+    },
+    {
+      "path": "_internal/select.pyd",
+      "bytes": 25320,
+      "sha256": "b9ef1709ed4cd0fd72e4c4ba9b7702cb79d1619c11554ea06277f3dac21bd010",
+      "origin": "Installed CPython 3.10.1 / DLLs\\select.pyd"
+    },
+    {
+      "path": "_internal/sqlite3.dll",
+      "bytes": 1465064,
+      "sha256": "20290d47f466c31d5f412eca9f412a9b1d45aa5c2be3d9719f9a12b970c635f4",
+      "origin": "Installed CPython 3.10.1 / DLLs\\sqlite3.dll"
+    },
+    {
+      "path": "_internal/tcl86t.dll",
+      "bytes": 1866480,
+      "sha256": "fbfd065f861ec0a90dd513bc209c56bbc23c54d2839964a0ec2df95848af7860",
+      "origin": "Installed CPython 3.10.1 / DLLs\\tcl86t.dll"
+    },
+    {
+      "path": "_internal/tk86t.dll",
+      "bytes": 1541872,
+      "sha256": "cd2f60075064dfc2e65c88b239a970cb4bd07cb3eec7cc26fb1bf978d4356b08",
+      "origin": "Installed CPython 3.10.1 / DLLs\\tk86t.dll"
+    },
+    {
+      "path": "_internal/ucrtbase.dll",
+      "bytes": 1362264,
+      "sha256": "3239227d27667ba20d10a880751924e5719de0078f9fce232d149d383f7681f6",
+      "origin": "Builder PATH: Codex cached libheif runtime / ucrtbase.dll"
+    },
+    {
+      "path": "_internal/unicodedata.pyd",
+      "bytes": 1117936,
+      "sha256": "89c93a672b649cd1e296499333df5b3d9ba2fd28f9280233b56441c69c126631",
+      "origin": "Installed CPython 3.10.1 / DLLs\\unicodedata.pyd"
+    },
+    {
+      "path": "_internal/VCRUNTIME140.dll",
+      "bytes": 97168,
+      "sha256": "ded5adaa94341e6c62aea03845762591666381dca30eb7c17261dd154121b83e",
+      "origin": "Installed CPython 3.10.1 / VCRUNTIME140.dll"
+    },
+    {
+      "path": "_internal/VCRUNTIME140_1.dll",
+      "bytes": 37240,
+      "sha256": "1554b5802968fdb2705a67cbb61585e9560b9e429d043a5aa742ef3c9bbfb6bf",
+      "origin": "Installed CPython 3.10.1 / VCRUNTIME140_1.dll"
+    },
+    {
+      "path": "ProcGenPlayground.exe",
+      "bytes": 4742698,
+      "sha256": "5a8d3d2e175a0748147074481b0173a5894f7351a3697d42d8e706bcbfd3864b",
+      "origin": "Project build / ProcGenPlayground.exe"
+    }
+  ],
+  "archive_sha256": "0ade817ee1abdcd9d19dc293ac4392bace40c813167b410db1d5c5e1ee2de19b",
+  "archive_bytes": 63368622,
+  "ambient_builder_cache_binaries": 45,
+  "native_runtime_provenance_review_complete": false
+}

@@ -12,11 +12,16 @@ from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
 
 ROOT = Path(__file__).resolve().parents[1]
+BUILD_TOOLS = {"altgraph", "pefile", "pyinstaller", "pyinstaller-hooks-contrib", "pywin32-ctypes", "setuptools"}
 
 
 def main() -> None:
     destination = ROOT / "third_party"
     destination.mkdir(exist_ok=True)
+    # Older collection matched executable notices.py files by substring.
+    for stale in (destination / "gym-notices" / "gym_notices").rglob("*"):
+        if stale.is_file() and stale.suffix in (".py", ".pyc"):
+            stale.unlink()
     pending = ["procgen", "pyinstaller"]
     seen: set[str] = set()
     inventory = []
@@ -32,6 +37,8 @@ def main() -> None:
                 pending.append(dependency.name)
         copied = []
         for file in distribution.files or []:
+            if file.suffix.lower() in (".py", ".pyc", ".pyd", ".dll", ".exe"):
+                continue
             if not any(word in file.name.lower() for word in ("license", "copying", "notice", "copyright")):
                 continue
             source = Path(distribution.locate_file(file))
@@ -43,7 +50,10 @@ def main() -> None:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)
             copied.append(str(target.relative_to(destination)))
-        inventory.append(dict(name=name, version=distribution.version,
+        scope = "build-tool" if name in BUILD_TOOLS else "dependency"
+        if name == "imageio-ffmpeg":
+            scope = "excluded-from-portable-build"
+        inventory.append(dict(name=name, version=distribution.version, scope=scope,
                               license=distribution.metadata.get("License-Expression") or distribution.metadata.get("License"),
                               notices=copied))
     python_root = Path(sys.base_prefix)
@@ -63,8 +73,11 @@ def main() -> None:
     # Flat path retained for users looking for the engine's own license.
     shutil.copyfile(Path(metadata.distribution("procgen").locate_file("procgen-0.10.7.dist-info/LICENSE")),
                     destination / "procgen" / "LICENSE")
-    if not (destination / "procgen" / "ASSET_LICENSES.md").is_file():
-        raise FileNotFoundError("Fetch upstream 0.10.7 ASSET_LICENSES.md before building.")
+    for required in ("procgen/ASSET_LICENSES.md", "gym3/LICENSE", "gym3/LICENSES.md",
+                     "glfw/GLFW-3.3.2-LICENSE.md", "qt/LICENSE.LGPL3", "qt/LICENSE.GPL3",
+                     "numpy/LGPL-2.1.txt"):
+        if not (destination / required).is_file():
+            raise FileNotFoundError(f"Required upstream notice is missing: {required}")
     print(f"Collected notices for {len(inventory)} distributions plus Python/Tcl/Tk")
 
 

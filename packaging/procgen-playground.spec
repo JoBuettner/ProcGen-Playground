@@ -13,6 +13,7 @@ for package in ("procgen", "gym3", "glfw", "moderngl", "glcontext"):
 datas += copy_metadata("procgen")
 datas += [(str(root / "LICENSE"), "."), (str(root / "README.md"), ".")]
 datas += [(str(root / "docs" / "ATTRIBUTION.md"), "licenses")]
+datas += [(str(root / "docs" / "LICENSE-AUDIT.md"), "licenses")]
 datas += [(str(root / "third_party"), "licenses/third_party")]
 
 a = Analysis(
@@ -21,7 +22,9 @@ a = Analysis(
     binaries=binaries, datas=datas, hiddenimports=hiddenimports,
     # Runtime uses CFFI's ABI mode only. Build tools and package tests are not
     # needed; excluding setuptools also avoids its vendored runtime hooks.
-    excludes=["pytest", "mypy", "setuptools", "pkg_resources"],
+    # Video recording is not exposed. ImageIO's plugin hook otherwise bundles
+    # a GPL-enabled FFmpeg executable that the application never uses.
+    excludes=["pytest", "mypy", "setuptools", "pkg_resources", "imageio_ffmpeg"],
     noarchive=False,
 )
 pyz = PYZ(a.pure)

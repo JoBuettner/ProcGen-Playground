@@ -7,15 +7,17 @@ Last updated: 2026-10-25. This is a development build, not a public release.
 - [x] M0 feasibility gate: original CoinRun playable on this Windows desktop
 - [x] M1: standalone portable CoinRun executable verified on the current PC
 - [x] M2: launcher implementation and all 16 game selections
-- [ ] M2 acceptance: full 16-game desktop play/close/relaunch walkthrough
+- [ ] Final acceptance: full 16-game desktop play/close/relaunch walkthrough
 - [ ] M3: hardening and reproducible Windows build
-- [ ] M4: installer and public release
+- [ ] M4: final validation and portable public release (no installer)
 
 ## Verified evidence
 
 **Updated sequencing agreed with the user:** the successful gameplay test was
-on the current PC. Separate-PC / no-Python verification is deferred until final
-release validation, and does not block launcher/installer development. This
+on the current PC. Full desktop acceptance and separate-PC / no-Python
+verification are deferred until final release validation. Development continues
+without those checks blocking it. The portable ZIP is the chosen distribution;
+an installer is out of scope. This
 overrides the original plan's clean-machine prerequisite for moving past M1.
 It does not mean that the separate-PC test has passed.
 
@@ -63,11 +65,20 @@ It does not mean that the separate-PC test has passed.
 - Independent standards review found no actionable violations or smells. Spec
   review found no correctness violations and called out the separate Unicode
   path desktop check. See `docs/verification/REVIEW.md`.
-- Current launcher ZIP: **84,339,776 bytes (80.4 MiB)**; application folder:
-  **184,251,165 bytes (175.7 MiB)**. SHA-256:
-  `e8f613e363f2b0ab02ef7846a7f1d31095814f5eccfc3ea498044c18ab091380`.
-  Final frozen report: `docs/verification/frozen-launcher-2026-10-25.json`.
-  The older `frozen-smoke-2026-10-25.json` records the historical M1 build.
+- Current launcher ZIP after the license audit: **63,368,622 bytes (60.4 MiB)**;
+  application folder: **122,823,859 bytes (117.1 MiB)**. SHA-256:
+  `0ade817ee1abdcd9d19dc293ac4392bace40c813167b410db1d5c5e1ee2de19b`.
+  Current frozen report: `docs/verification/frozen-license-2026-10-25.json`:
+  **96/96 passed**, 1,290 original files unchanged, supplemental notices present,
+  FFmpeg absent. Older frozen reports record historical M1/M2 builds.
+- License-audit rebuild: 85 tests, strict mypy, notice collection, PyInstaller,
+  ZIP generation and all 96 frozen parity cases passed. Native binary hashes,
+  import evidence and source categories are recorded in
+  `docs/verification/bundled-license-audit-2026-10-25.json`. Build/verification
+  logs are `.artifacts/license-build.log` and `.artifacts/license-frozen-final.log`.
+  The native manifest records 45 Microsoft DLLs resolved from the builder's
+  ambient cached runtime directory; controlled sourcing/provenance is part of
+  the open Microsoft redistribution/build-hardening gate.
 - **Complete build script passed** using `.artifacts/lock-env`: package
   consistency, 85 tests, types, notices, 96 original native cases, PyInstaller,
   ZIP/checksum generation, and 96 frozen parity cases. Full local log:
@@ -91,13 +102,18 @@ It does not mean that the separate-PC test has passed.
 - Missing-library GUI error handling has unit coverage, but the desktop error
   dialog check was stopped before verification; the temporary DLL rename in a
   disposable extraction was restored. No failure-dialog pass is claimed.
-- Native Qt/C++ redistribution compliance audit remains open. Asset notices and
-  installed distribution/Python/Tcl/Tk license files are collected and bundled.
-- GitHub remote is not configured. No public release or installer exists, and
+- Dependency audit: recommend MIT for our code; dependencies keep their own
+  licenses. Added missing gym3/font, native GLFW, Qt and Python-native notices;
+  excluded unused GPL-enabled FFmpeg from packaging. Corresponding Qt source/
+  relinking materials, Qt subcomponent inventory, libquadmath LGPL compliance,
+  and Microsoft redistribution
+  provenance remain public-release gates. See `docs/LICENSE-AUDIT.md`.
+- GitHub remote is not configured. No public release exists, and
   CI has not run on GitHub. A local workflow is not evidence of CI success.
-- The M2 interface/process implementation is complete and packaged. Its complete
-  desktop acceptance matrix remains open. Installer/publication and remaining
-  distribution hardening are subsequent milestones.
+- The M2 interface/process implementation is complete and packaged. Remaining
+  work is distribution compliance/hardening and final acceptance/publication.
+  There is no known missing required UI feature. Unchecked UI scenarios are
+  listed precisely in `docs/verification/DESKTOP-CHECKLIST.md`.
 
 ## Failures and resolutions
 

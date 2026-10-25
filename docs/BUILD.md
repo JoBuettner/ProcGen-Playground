@@ -104,6 +104,8 @@ fix every random choice or promise an identical complete gameplay trajectory.
    links Qt; its PE imports also require Visual C++ runtimes. PyInstaller
    collects the runtime DLLs into `_internal`; clean-machine loading still
    needs desktop verification.
+   The native license/source audit is in `LICENSE-AUDIT.md`; MIT on the launcher
+   does not clear Qt's static-link or Microsoft redistribution requirements.
 3. The visible upstream game window uses gym3's GLFW/OpenGL 3.3 renderer, which
    dynamically loads GLFW and ModernGL. `gym3/internal/font.bin` and `libenv.h`
    are required alongside its Python code.

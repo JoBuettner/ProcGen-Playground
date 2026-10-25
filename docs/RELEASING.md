@@ -1,17 +1,20 @@
 # Release validation checklist
 
-Current output is an M1 development artifact, not a public release. M2 launcher,
-M4 installer, and tag publication are deferred until their preceding gates pass.
+Current output is an M2 development artifact with the 16-game launcher.
+Distribution uses the portable ZIP; an installer is out of scope. By user
+decision, full desktop acceptance and separate-PC testing happen at the end.
+No public release/tag has been published.
 
 ## Automated evidence
 
-- [ ] Fresh Windows x64/Python 3.10 setup using hashed lock files
-- [ ] `scripts/build_windows.ps1` completes successfully
-- [ ] Every environment initializes, observes, steps, restores state, and closes
-- [ ] Frozen outputs match unmodified upstream for all 96 native cases
-- [ ] Extracted data/native files match original package hashes
-- [ ] Space/non-ASCII extraction path and stripped environment tests pass
-- [ ] ZIP checksum, version, size, build log, dependency inventory archived
+- [x] Fresh Windows x64/Python 3.10 setup using hashed lock files (current host)
+- [x] `scripts/build_windows.ps1` completed successfully for M2
+- [x] Every environment initializes, observes, steps, restores state, and closes
+- [x] Frozen outputs match unmodified upstream for all 96 native cases
+- [x] Extracted data/native files match original package hashes
+- [x] Space/non-ASCII extraction path and stripped environment tests pass
+- [x] Development ZIP checksum, version, size, build log, dependency inventory recorded
+- [ ] Repeat automated build/verification on the final release candidate
 - [ ] GitHub Actions build actually executed and passed (a workflow file alone is insufficient)
 
 ## Real desktop checks (record OS, CPU/GPU, artifact SHA-256, date, tester)
@@ -30,9 +33,14 @@ M4 installer, and tag publication are deferred until their preceding gates pass.
 
 ## Distribution
 
-- [ ] Finish native Qt/C++ dependency license/source-compliance review
-- [ ] Include upstream code and asset attributions and all relevant notices
-- [ ] Test optional installer, shortcuts, uninstall, and user-data preservation
+- [x] Audit package licenses and identify native/font/asset exceptions
+- [x] Include supplemental gym3/font, native GLFW, Qt and Python notices
+- [x] Exclude unused GPL-enabled FFmpeg and enforce exclusion in artifact checks
+- [ ] Supply and verify Qt corresponding-source and relinking materials
+- [ ] Complete Qt embedded-component inventory from build/configuration evidence
+- [ ] Resolve static libquadmath LGPL source/relinking requirements in NumPy's DLL
+- [ ] Verify Microsoft runtime provenance, applicable redistribution rights/notices
+- [ ] Final review of all upstream code, font and asset attributions
 - [ ] Capture actual SmartScreen/antivirus behavior; never advise disabling protections
 - [ ] Publish notes, checksums, tested platforms, requirements, known limitations
 - [ ] Gate tag publication on tests **and** recorded desktop validation
@@ -40,3 +48,5 @@ M4 installer, and tag publication are deferred until their preceding gates pass.
 Without clean-machine desktop evidence, label any shared build
 **prerelease / GUI testing incomplete**. Do not infer this evidence from headless
 CI or from an existing development machine with Python installed.
+Do not publish a binary while the licensing/source-compliance gates remain open;
+the development label does not waive dependency obligations.

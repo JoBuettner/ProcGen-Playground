@@ -49,6 +49,10 @@ def main() -> None:
     assert (app / "_internal" / "gym3" / "internal" / "font.bin").is_file()
     assert (app / "_internal" / "glfw" / "glfw3.dll").is_file()
     assert (app / "_internal" / "licenses" / "third_party" / "procgen" / "ASSET_LICENSES.md").is_file()
+    for notice in ("gym3/LICENSE", "gym3/LICENSES.md", "glfw/GLFW-3.3.2-LICENSE.md",
+                   "qt/LICENSE.LGPL3", "qt/LICENSE.GPL3", "numpy/LGPL-2.1.txt"):
+        assert (app / "_internal" / "licenses" / "third_party" / notice).is_file(), notice
+    assert not list(app.rglob("*ffmpeg*.exe")), "unused FFmpeg must not be distributed"
     environment = {key: value for key, value in os.environ.items()
                    if not key.upper().startswith(("PYTHON", "VIRTUAL_ENV", "CONDA", "PYGLFW", "GLCONTEXT"))}
     environment["PATH"] = str(Path(os.environ["SystemRoot"]) / "System32")

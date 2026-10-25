@@ -52,3 +52,6 @@ dependencies, tests, and portable build. The full roadmap is in
 The engine, timing, controls, and assets come from unmodified `procgen==0.10.7`.
 The wrapper is MIT licensed; upstream code, assets, and dependencies have their
 own terms. Read [attributions](docs/ATTRIBUTION.md) before redistribution.
+The [license audit](docs/LICENSE-AUDIT.md) records the dependency findings and
+remaining source/redistribution work. Distribution will use the portable ZIP;
+no installer is planned. Full desktop and separate-PC tests are final validation.

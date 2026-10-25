@@ -89,7 +89,12 @@ Totals: **0 standards findings; 0 spec findings**.
 
 - Launch/play/close/relaunch all 16 games through the final packaged menu.
   Native tests for all 16 do not replace this complete desktop checklist.
-- Confirm representative shooter/rotation controls, Stop, duplicate launcher
+- Confirm representative shooter/rotation controls, duplicate launcher
   feedback, and full menu keyboard navigation on the final build.
 - Separate-PC / no-Python, antivirus/SmartScreen, and final distribution
   licensing checks remain final-release work.
+
+Stop and parent-close cleanup have since passed representative desktop checks.
+The current precise outstanding UI cases and final-artifact matrix are in
+`DESKTOP-CHECKLIST.md`. By user decision, full desktop/separate-PC testing is
+deferred to the end and portable ZIP distribution needs no installer.
