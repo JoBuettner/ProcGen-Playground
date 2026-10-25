@@ -36,8 +36,17 @@ Version: `0.2.0.dev0`. No upstream ProcGen files or native mechanics are modifie
   confirms exact validated options.
 - Close the launcher while Heist runs: launcher logs closure; the recorded
   child PID no longer exists. No orphan game process was observed.
+- Final rebuilt EXE: start CoinRun, use Alt+S (Stop), and observe the menu ready
+  for another Play. The recorded child PID no longer exists.
+- Final rebuilt EXE: scroll/select Cave Flyer, Play, inspect normal rendering,
+  close its game window, and observe return to the enabled menu with successful
+  child exit. Physical rotation/shooting acceptance is still a manual item.
+- Final frozen child logs contain upstream maintenance output and timestep
+  messages, confirming capture despite redirected standard handles.
 
 ## Automated checks
+
+- Full unit suite: **85 passed**. Strict mypy: **10 source modules passed**.
 
 - All game IDs and full option sets round-trip through frozen/development child
   commands; frozen commands never invoke an external Python.
@@ -48,6 +57,33 @@ Version: `0.2.0.dev0`. No upstream ProcGen files or native mechanics are modifie
 - New launcher ZIP passed **96/96 native parity cases**, from a space/non-ASCII
   extraction path with stripped Python/environment overrides; all **1,290**
   ProcGen data files matched the upstream installed package.
+- Entire `scripts/build_windows.ps1` pipeline completed successfully in the
+  fresh offline-installed dependency environment. Local log:
+  `.artifacts/m2-build.log`; final report:
+  `docs/verification/frozen-launcher-2026-10-25.json`.
+- Final ZIP: 84,339,776 bytes; SHA-256
+  `e8f613e363f2b0ab02ef7846a7f1d31095814f5eccfc3ea498044c18ab091380`.
+
+## Review
+
+Comparison: `0948979...70f6b65`, reviewed independently on two axes.
+
+### Standards
+
+No actionable findings. Configuration mapping and process ownership live
+outside the GUI. Frozen children use the same executable with `shell=False`;
+shutdown reaps the child and assigned children have a kill-on-close backstop.
+Logging is per role and stored in AppData; original gameplay stays upstream.
+
+### Spec
+
+No actionable findings. The launcher covers all 16 game selections, descriptions,
+supported options, validation, child dispatch, errors, duplicate policy, and
+shutdown. Stop and Job Object ownership support the specified lifecycle. Optional
+saved preferences are not implemented; selections remain in session. Native
+parity is correctly distinguished from the pending full desktop walkthrough.
+
+Totals: **0 standards findings; 0 spec findings**.
 
 ## Remaining desktop/release checks
 

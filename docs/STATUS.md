@@ -6,7 +6,8 @@ Last updated: 2026-10-25. This is a development build, not a public release.
 
 - [x] M0 feasibility gate: original CoinRun playable on this Windows desktop
 - [x] M1: standalone portable CoinRun executable verified on the current PC
-- [ ] M2: launcher and all 16 games
+- [x] M2: launcher implementation and all 16 game selections
+- [ ] M2 acceptance: full 16-game desktop play/close/relaunch walkthrough
 - [ ] M3: hardening and reproducible Windows build
 - [ ] M4: installer and public release
 
@@ -37,8 +38,10 @@ It does not mean that the separate-PC test has passed.
   not a claim of playing every game with a keyboard.
 - Fresh `.artifacts/lock-env` installation succeeded **offline**, using hashed
   archives, pinned bootstrap tools, and `--no-build-isolation`; `pip check` passed.
-- Full unit suite: **42 passed**. Strict mypy passed for all six source modules.
-  These also passed using the fresh offline-installed environment.
+- Current version: **0.2.0.dev0**. Full unit suite: **85 passed**. Strict mypy
+  passed for all **10** source modules, using the fresh offline-installed
+  environment. Tests include actual Windows child/process ownership and abrupt
+  owner-exit cleanup, plus frozen/development argument roundtrips for all games.
 - PyInstaller built a windowed, folder-based standalone EXE with its own Python
   runtime, native libraries, assets, GLFW library, gym3 font/header, and notices.
 - Agent inspected the packaged CoinRun window on the actual desktop, observed
@@ -60,25 +63,31 @@ It does not mean that the separate-PC test has passed.
 - Independent standards review found no actionable violations or smells. Spec
   review found no correctness violations and called out the separate Unicode
   path desktop check. See `docs/verification/REVIEW.md`.
-- Development ZIP: **84,309,452 bytes (80.4 MiB)**; application folder:
-  **184,219,869 bytes (175.7 MiB)**. SHA-256:
-  `040926ea82365d556930be37ce4ee1f6be92043097f2dac2d39bf22a14ec4364`.
-  Committed frozen report: `docs/verification/frozen-smoke-2026-10-25.json`.
-- A final end-to-end build-script run in the fresh environment passed `pip
-  check`, all 42 tests, type checking, and notice collection. It was interrupted
-  during the upstream native matrix after the user stopped Computer Use with
-  Escape. It did not replace the previously validated portable ZIP. The script
-  as a whole is therefore **not yet recorded as successfully executed**.
+- Current launcher ZIP: **84,339,776 bytes (80.4 MiB)**; application folder:
+  **184,251,165 bytes (175.7 MiB)**. SHA-256:
+  `e8f613e363f2b0ab02ef7846a7f1d31095814f5eccfc3ea498044c18ab091380`.
+  Final frozen report: `docs/verification/frozen-launcher-2026-10-25.json`.
+  The older `frozen-smoke-2026-10-25.json` records the historical M1 build.
+- **Complete build script passed** using `.artifacts/lock-env`: package
+  consistency, 85 tests, types, notices, 96 original native cases, PyInstaller,
+  ZIP/checksum generation, and 96 frozen parity cases. Full local log:
+  `.artifacts/m2-build.log`. The earlier interrupted attempt is superseded.
+- Packaged launcher desktop checks passed for CoinRun play/close/return,
+  invalid-seed feedback, Heist seed 42 with agent view/monochrome, and closing
+  the parent while its game runs. Final rebuild also passed Stop-game cleanup,
+  Cave Flyer startup/render/close/return, and upstream output capture in game.log.
+  These are representative checks, not a completed 16-game desktop matrix.
+- Separate standards/spec reviews of `0948979...70f6b65` found no actionable
+  findings. Details: `docs/verification/M2-LAUNCHER.md`.
 
 ## Remaining gates and deferred work
 
 - **No clean Windows machine/VM without Python has been tested.** Stripping PATH
   and overrides on this development host does not establish that release gate.
-- Representative original CaveFlyer and Heist/Maze keyboard controls remain
-  unchecked; their native configuration/stepping checks passed.
-- GUI agent/human view switching and visual toggles need manual validation.
-- Complete an uninterrupted `scripts/build_windows.ps1` run. Individual native,
-  packaging, parity, and unit/type commands have passed as recorded above.
+- Full 16-game menu acceptance and representative physical movement/shooting/
+  rotation controls remain to check. See `docs/verification/DESKTOP-CHECKLIST.md`.
+- Both views and a visual toggle were inspected on desktop; remaining setting
+  combinations and duplicate-launcher message behavior need final manual checks.
 - Missing-library GUI error handling has unit coverage, but the desktop error
   dialog check was stopped before verification; the temporary DLL rename in a
   disposable extraction was restored. No failure-dialog pass is claimed.
@@ -86,9 +95,9 @@ It does not mean that the separate-PC test has passed.
   installed distribution/Python/Tcl/Tk license files are collected and bundled.
 - GitHub remote is not configured. No public release or installer exists, and
   CI has not run on GitHub. A local workflow is not evidence of CI success.
-- M2 launcher implementation is underway: all 16 games, supported settings,
-  separate packaged game child, single-instance policy, and Windows process
-  ownership. Fresh packaged/desktop verification is required before claiming M2.
+- The M2 interface/process implementation is complete and packaged. Its complete
+  desktop acceptance matrix remains open. Installer/publication and remaining
+  distribution hardening are subsequent milestones.
 
 ## Failures and resolutions
 
