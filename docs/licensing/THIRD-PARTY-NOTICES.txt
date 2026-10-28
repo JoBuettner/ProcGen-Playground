@@ -1,0 +1,57 @@
+ProcGen Playground: third-party software and source access
+=======================================================
+
+ProcGen Playground is an independent application, not an official OpenAI product.
+Its launcher code is MIT licensed. The original ProcGen 0.10.7 game engine and
+artwork are unchanged; OpenAI's code license is MIT, and the artwork retains the
+individual CC0, CC BY and OGA-BY licenses recorded in the bundled asset credits.
+The complete bundle is not covered by the launcher's MIT license alone.
+
+This application includes Qt 5.13.2, copyright The Qt Company and contributors,
+statically linked into ProcGen's env.dll under LGPL version 3. It also includes
+LGPL-2.1-or-later libquadmath in NumPy's OpenBLAS library. You retain the rights
+their licenses grant to obtain the corresponding source, modify the libraries,
+rebuild/relink and run replacements, and debug those modifications.
+
+The matching actual source companion is:
+    ProcGenPlayground-corresponding-sources.zip
+
+It is provided alongside the portable ZIP, with its own SHA-256 file. Obtain it
+from the same release/download location as this program; source access has no
+additional charge. It contains the pinned original sources, patches/build
+recipes, this application's source, licenses and replacement instructions.
+See _internal/licenses/SOURCE-COMPANION.md and the companion README.
+Distributors must keep the matching source download available alongside each
+binary release, rather than substituting a link to a moving upstream branch.
+
+Full component notices and license texts are under _internal/licenses/:
+    ATTRIBUTION.md
+    third_party/procgen/ASSET_LICENSES.md
+    third_party/assets/                 (complete artwork license texts)
+    third_party/gym3/LICENSES.md        (Terminus font, SIL OFL 1.1)
+    third_party/qt/                     (LGPLv3/GPLv3 and Qt attribution texts)
+    third_party/numpy/                  (numerical library terms, LGPL-2.1)
+    third_party/microsoft/              (Microsoft-only component terms)
+
+Microsoft runtime component agreement
+-------------------------------------
+This Windows application includes Microsoft Distributable Code. By using or
+redistributing those Microsoft components, you agree to the component-specific
+terms in _internal/licenses/third_party/microsoft/DOWNSTREAM-TERMS.md.
+If you do not agree, do not use or redistribute those Microsoft components.
+Their original distribution conditions are included in the same directory.
+These terms apply only to the Microsoft code, not to ProcGen Playground, Qt,
+libquadmath or other separately licensed components. Their MIT/LGPL and other
+source, modification, replacement, debugging and redistribution rights remain.
+
+Additional acknowledgements
+---------------------------
+This product includes software developed by the OpenSSL Project for use in the
+OpenSSL Toolkit (http://www.openssl.org/), and cryptographic software written by
+Eric Young (eay@cryptsoft.com).
+Portions of this software are copyright (c) 2000-2026 The FreeType Project (www.freetype.org).
+All rights reserved. The permissive FreeType License alternative is used.
+The GLFW viewer library was rebuilt from unchanged GLFW 3.3.2 source using a
+documented VC14 toolchain; no gameplay mechanics or ProcGen assets were changed.
+
+All other components retain the licenses and notices included with them.

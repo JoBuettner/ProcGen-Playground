@@ -1,0 +1,33 @@
+{
+  "workspace": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\license-sources\\numerical-prepare-check",
+  "tested_on": "2026-10-26",
+  "preparation": "Fresh source/tool extraction and all archive hashes passed",
+  "logs": [
+    {
+      "file": "probe-toolchain-202448.log",
+      "sha256": "1acf16b3be7c863bcba84e64df39771928d7bf1b77cde570b900144e14d75749",
+      "bytes": 2719
+    },
+    {
+      "file": "rebuild-quadmath-202449.log",
+      "sha256": "281c36aa6e719c7bd924372f34b3dbb7b5e8149aa64fa167139a3cb318764de5",
+      "bytes": 170019
+    },
+    {
+      "file": "apply-quadmath-probe-202744.log",
+      "sha256": "c3a6a43da14aabd37faffc7f9290033fe2a077c7fef42528f8b81fafa4491391",
+      "bytes": 52
+    },
+    {
+      "file": "rebuild-quadmath-202745.log",
+      "sha256": "d239ad0547201c27cd603ba9f825bbc4ecec23989d708c53d4b6390d793a1ce6",
+      "bytes": 18686
+    },
+    {
+      "file": "test-quadmath-source-202917.log",
+      "sha256": "2f04695144548e62731c2e49079440b7816bfc243261a0e54d69f5f64e2804ae",
+      "bytes": 85
+    }
+  ],
+  "test_output": "ProcGen libquadmath source modification 2026-10-26\n1.41421356237309504880168872421\n"
+}

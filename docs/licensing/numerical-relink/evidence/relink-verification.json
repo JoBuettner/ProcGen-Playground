@@ -1,0 +1,103 @@
+{
+  "original_dll_sha256_before": "57b87772bf676b5c2d718c79dddc9f039d79ec3319fee1398cc305adff7b69e5",
+  "original_dll_sha256_after": "57b87772bf676b5c2d718c79dddc9f039d79ec3319fee1398cc305adff7b69e5",
+  "modified_dll": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\license-sources\\numerical\\build\\openblas\\procgen-openblas-modified-quadmath.dll",
+  "modified_dll_sha256": "306c6291697d69504f9cb89202b791124b319370751d14bf7da2fe81dad80442",
+  "original_export_count": 9360,
+  "modified_export_count": 9361,
+  "missing_original_exports": [],
+  "original_worker": {
+    "numpy_file": "D:\\Repositories\\Research\\ProcGen-Playground\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+    "numpy_version": "1.26.4",
+    "loaded_dll": "D:\\Repositories\\Research\\ProcGen-Playground\\.venv\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+    "config": "OpenBLAS 0.3.23.dev  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Zen MAX_THREADS=24",
+    "cases": [
+      "float32_dot",
+      "float32_solve",
+      "float32_svd_values",
+      "float64_dot",
+      "float64_solve",
+      "float64_svd_values",
+      "complex64_dot",
+      "complex64_solve",
+      "complex64_svd_values",
+      "complex128_dot",
+      "complex128_solve",
+      "complex128_svd_values"
+    ],
+    "solve_and_svd_residual_checks": "passed",
+    "modified_libquadmath_probe": null
+  },
+  "modified_worker": {
+    "numpy_file": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\license-sources\\numerical\\replacement-site\\numpy\\__init__.py",
+    "numpy_version": "1.26.4",
+    "loaded_dll": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\license-sources\\numerical\\replacement-site\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+    "config": "OpenBLAS 0.3.23.dev  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Zen MAX_THREADS=24",
+    "cases": [
+      "float32_dot",
+      "float32_solve",
+      "float32_svd_values",
+      "float64_dot",
+      "float64_solve",
+      "float64_svd_values",
+      "complex64_dot",
+      "complex64_solve",
+      "complex64_svd_values",
+      "complex128_dot",
+      "complex128_solve",
+      "complex128_svd_values"
+    ],
+    "solve_and_svd_residual_checks": "passed",
+    "modified_libquadmath_probe": "ProcGen libquadmath source modification 2026-10-26"
+  },
+  "comparisons": {
+    "float32_dot": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "float32_solve": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "float32_svd_values": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "float64_dot": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "float64_solve": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "float64_svd_values": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "complex64_dot": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "complex64_solve": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "complex64_svd_values": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "complex128_dot": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "complex128_solve": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    "complex128_svd_values": {
+      "passed": true,
+      "max_absolute_difference": 0.0
+    }
+  }
+}

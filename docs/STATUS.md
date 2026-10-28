@@ -1,6 +1,6 @@
 # Development status
 
-Last updated: 2026-10-25. This is a development build, not a public release.
+Last updated: 2026-10-28. This is a development build, not a public release.
 
 ## Milestones
 
@@ -40,7 +40,7 @@ It does not mean that the separate-PC test has passed.
   not a claim of playing every game with a keyboard.
 - Fresh `.artifacts/lock-env` installation succeeded **offline**, using hashed
   archives, pinned bootstrap tools, and `--no-build-isolation`; `pip check` passed.
-- Current version: **0.2.0.dev0**. Full unit suite: **85 passed**. Strict mypy
+- Current version: **0.2.0.dev0**. Full unit suite: **103 passed**. Strict mypy
   passed for all **10** source modules, using the fresh offline-installed
   environment. Tests include actual Windows child/process ownership and abrupt
   owner-exit cleanup, plus frozen/development argument roundtrips for all games.
@@ -59,16 +59,16 @@ It does not mean that the separate-PC test has passed.
   This automated report does not test GLFW window creation/keyboard input from
   that extraction path; the separate desktop check below supplies that evidence.
 - Agent launched the ZIP-extracted application from
-  `.artifacts/Portable Prüfung h90y2_i5/ProcGenPlayground/`, observed normal
+  `.artifacts/Portable PrÃ¼fung h90y2_i5/ProcGenPlayground/`, observed normal
   CoinRun rendering, verified the `O` keyboard overlay toggle, and closed it.
   Logs recorded successful shutdown; subsequent window inventory was empty.
 - Independent standards review found no actionable violations or smells. Spec
   review found no correctness violations and called out the separate Unicode
   path desktop check. See `docs/verification/REVIEW.md`.
-- Current launcher ZIP after the license audit: **63,368,622 bytes (60.4 MiB)**;
+- Historical launcher ZIP after the 2026-10-25 initial audit: **63,368,622 bytes (60.4 MiB)**;
   application folder: **122,823,859 bytes (117.1 MiB)**. SHA-256:
   `0ade817ee1abdcd9d19dc293ac4392bace40c813167b410db1d5c5e1ee2de19b`.
-  Current frozen report: `docs/verification/frozen-license-2026-10-25.json`:
+  Historical frozen report: `docs/verification/frozen-license-2026-10-25.json`:
   **96/96 passed**, 1,290 original files unchanged, supplemental notices present,
   FFmpeg absent. Older frozen reports record historical M1/M2 builds.
 - License-audit rebuild: 85 tests, strict mypy, notice collection, PyInstaller,
@@ -76,9 +76,9 @@ It does not mean that the separate-PC test has passed.
   import evidence and source categories are recorded in
   `docs/verification/bundled-license-audit-2026-10-25.json`. Build/verification
   logs are `.artifacts/license-build.log` and `.artifacts/license-frozen-final.log`.
-  The native manifest records 45 Microsoft DLLs resolved from the builder's
-  ambient cached runtime directory; controlled sourcing/provenance is part of
-  the open Microsoft redistribution/build-hardening gate.
+  That historical native manifest recorded 45 Microsoft DLLs from the builder's
+  ambient cached runtime directory. The current build replaces that selection
+  with three controlled, signed VC14 runtime files and same-version rebuilt GLFW.
 - **Complete build script passed** using `.artifacts/lock-env`: package
   consistency, 85 tests, types, notices, 96 original native cases, PyInstaller,
   ZIP/checksum generation, and 96 frozen parity cases. Full local log:
@@ -91,6 +91,16 @@ It does not mean that the separate-PC test has passed.
 - Separate standards/spec reviews of `0948979...70f6b65` found no actionable
   findings. Details: `docs/verification/M2-LAUNCHER.md`.
 
+## Current licensing build — 2026-10-28
+
+The corrected VC14 14.51 build passed 103 unit tests, strict mypy, 96 original
+native cases and 96 frozen parity cases; 1,290 original data files are unchanged.
+The binary/source pair includes 11 pinned source archives and nine verified
+numerical relink inputs. All 54 native files have recorded provenance; runtime
+exports and observable toolset floors pass. See `verification/LICENSE-COMPLIANCE.md`
+and `verification/frozen-licensing-2026-10-28.json`.
+Portable ZIP SHA-256: `07aab507a22141335beee0307c438d1ee037e577294227705e9974b3857957ef`.
+
 ## Remaining gates and deferred work
 
 - **No clean Windows machine/VM without Python has been tested.** Stripping PATH
@@ -102,16 +112,16 @@ It does not mean that the separate-PC test has passed.
 - Missing-library GUI error handling has unit coverage, but the desktop error
   dialog check was stopped before verification; the temporary DLL rename in a
   disposable extraction was restored. No failure-dialog pass is claimed.
-- Dependency audit: recommend MIT for our code; dependencies keep their own
-  licenses. Added missing gym3/font, native GLFW, Qt and Python-native notices;
-  excluded unused GPL-enabled FFmpeg from packaging. Corresponding Qt source/
-  relinking materials, Qt subcomponent inventory, libquadmath LGPL compliance,
-  and Microsoft redistribution
-  provenance remain public-release gates. See `docs/LICENSE-AUDIT.md`.
+- License/source preparation now supplies actual pinned sources, original
+  notices, Qt and libquadmath rebuild/relink helpers and tested replacement
+  procedures, Qt subcomponent attribution inventory, and controlled Microsoft
+  runtime provenance/terms. The matching source companion must be published
+  alongside each binary release. See `licensing/REDISTRIBUTION.md`; the initial
+  `LICENSE-AUDIT.md` is historical.
 - GitHub remote is not configured. No public release exists, and
   CI has not run on GitHub. A local workflow is not evidence of CI success.
 - The M2 interface/process implementation is complete and packaged. Remaining
-  work is distribution compliance/hardening and final acceptance/publication.
+  work is final acceptance and publication of the paired binary/source materials.
   There is no known missing required UI feature. Unchecked UI scenarios are
   listed precisely in `docs/verification/DESKTOP-CHECKLIST.md`.
 

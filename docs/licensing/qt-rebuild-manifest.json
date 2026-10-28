@@ -1,0 +1,72 @@
+{
+  "commands": [
+    {
+      "command": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+        "-S",
+        "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\sources\\procgen-5e1dbf341d291eff40d1f9e0c0a0d5003643aebf\\procgen",
+        "-B",
+        "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\engine-build",
+        "-G",
+        "Visual Studio 16 2019",
+        "-A",
+        "x64",
+        "-DCMAKE_PREFIX_PATH=D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\qt-build\\lib\\cmake\\Qt5",
+        "-DLIBENV_DIR=D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\sources\\gym3-2ed9d344ede8bbd96b6280e9fbbbf55861ea33a9\\gym3",
+        "-DPROCGEN_PACKAGE=ON"
+      ],
+      "cwd": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check"
+    },
+    {
+      "command": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+        "--build",
+        "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\engine-build",
+        "--config",
+        "RelWithDebInfo",
+        "--parallel",
+        "4"
+      ],
+      "cwd": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check"
+    }
+  ],
+  "source_archive_hashes": {
+    "qtbase-everywhere-src-5.13.2.tar.xz": "26b6b686d66a7ad28eaca349e55e2894e5a735f3831e45f2049e93b1daa92121",
+    "procgen-5e1dbf341d291eff40d1f9e0c0a0d5003643aebf.tar.gz": "46630fbfb6efbf8a2910104ace31a99025aad806dd996de0e49daaa7e7f757c8",
+    "gym3-2ed9d344ede8bbd96b6280e9fbbbf55861ea33a9.tar.gz": "ad46835a1dd6e15257928de9855eda0dc7e49a47d7a682ccaf6c1ff33e8dd7a0"
+  },
+  "game_source_patches_applied_by_helper": false,
+  "normalized_forwarding_headers": [
+    "include/QtEventDispatcherSupport/5.13.2/QtEventDispatcherSupport/private/qgenericunixeventdispatcher_p.h",
+    "include/QtEventDispatcherSupport/5.13.2/QtEventDispatcherSupport/private/qwindowsguieventdispatcher_p.h",
+    "include/QtFontDatabaseSupport/5.13.2/QtFontDatabaseSupport/private/qfontenginemultifontconfig_p.h",
+    "include/QtFontDatabaseSupport/5.13.2/QtFontDatabaseSupport/private/qgenericunixfontdatabase_p.h",
+    "include/QtFontDatabaseSupport/5.13.2/QtFontDatabaseSupport/private/qwindowsfontenginedirectwrite_p.h",
+    "include/QtLinuxAccessibilitySupport/5.13.2/QtLinuxAccessibilitySupport/private/struct_marshallers_p.h",
+    "include/QtPlatformCompositorSupport/5.13.2/QtPlatformCompositorSupport/private/qopenglcompositorbackingstore_p.h",
+    "include/QtWindowsUIAutomationSupport/5.13.2/QtWindowsUIAutomationSupport/private/qwindowsuiawrapper_p.h",
+    "include/QtWindowsUIAutomationSupport/5.13.2/QtWindowsUIAutomationSupport/private/uiaattributeids_p.h",
+    "include/QtWindowsUIAutomationSupport/5.13.2/QtWindowsUIAutomationSupport/private/uiaclientinterfaces_p.h",
+    "include/QtWindowsUIAutomationSupport/5.13.2/QtWindowsUIAutomationSupport/private/uiacontroltypeids_p.h",
+    "include/QtWindowsUIAutomationSupport/5.13.2/QtWindowsUIAutomationSupport/private/uiaserverinterfaces_p.h"
+  ],
+  "qt_source_override": false,
+  "qt_build_reused": true,
+  "rebuilt_engine": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\engine-build\\RelWithDebInfo\\env.dll",
+  "sha256": "6e7c319b10069d65e6016cda501342dd0833a7926c457f3b115cce7ded7d3c85",
+  "compiler": "14.29.30133",
+  "windows_sdk": "10.0.19041.0\\",
+  "qt_source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\sources\\qtbase-everywhere-src-5.13.2",
+  "version_marker_proof": "docs/verification/qt-relink-2026-10-26.json",
+  "source_archives_unmodified": true,
+  "source_archive_origin": "third_party/source-archives.json",
+  "build_logs_sha256": {
+    "qt-configure.log": "93d5adf2766ec41f8e6a6e607d8d49ff80b192198360301c2c669e90dc923326",
+    "qt-build.log": "b18ac56903d8f92bffd4a182cc811f2cb2e2dff88f9ff4bf76497ae5265a0305",
+    "qt-build-resume.log": "2ab31d5e935a111e1febf2a3e5bbbfaaa03ae60cb27f2db8490c3dad8f01973f",
+    "engine-configure.log": "76a45181354e7ea3724250dfee8bfc5060e0fde9f6229d50cefeb08d42bf7d70",
+    "engine-build.log": "940cbda029f62dbebe73522e913277df3bd7300de23d76656d09be7599a00a34",
+    "qt-modified-core.log": "05917956e5c51fef451e3c0660a7638d1f8f0af588d3c848c31209f2c363314d",
+    "qt-modified-engine.log": "4d036d5bb2e81842f331a6948be5e18721e3fb143580e1db5c33c41ba7dd3fed"
+  }
+}

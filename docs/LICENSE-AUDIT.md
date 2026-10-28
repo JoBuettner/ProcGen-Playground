@@ -1,5 +1,10 @@
 # Dependency license audit — 2026-10-25
 
+> Historical initial audit. The source/notices/runtime preparation that followed
+> is recorded in `docs/licensing/REDISTRIBUTION.md` (2026-10-28), with actual
+> corresponding-source delivery described in `docs/licensing/SOURCE-COMPANION.md`.
+> The unchecked items below describe the initial findings, not the current status.
+
 ## Recommendation
 
 Retain **MIT for our launcher and build scripts**. It allows reuse,

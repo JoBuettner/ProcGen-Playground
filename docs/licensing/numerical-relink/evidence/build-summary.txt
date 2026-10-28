@@ -1,0 +1,19 @@
+Default rebuild-openblas.sh make process completed with exit code 0.
+This records build completion; it is not a blanket assertion that all upstream test executables were run.
+
+ OpenBLAS build complete. (BLAS CBLAS LAPACK LAPACKE)
+
+  OS               ... WINNT             
+  Architecture     ... x86_64               
+  BINARY           ... 64bit                 
+  Use 64 bits int    (equivalent to "-i8" in Fortran)      
+  C compiler       ... GCC  (cmd & version : cc.exe (Built by Jeroen for the R-project) 10.3.0)
+  Fortran compiler ... GFORTRAN  (cmd & version : GNU Fortran (Built by Jeroen for the R-project) 10.3.0)
+  Library Name     ... libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0p-r0.3.23.dev.a (Multi-threading; Max num-threads is 24)
+  Supporting multiple x86_64 cpu models with minimum requirement for the common code being PRESCOTT
+
+To install the library, you can run "make PREFIX=/path/to/your/installation install".
+
+Note that any flags passed to make during build should also be passed to make install
+to circumvent any install errors.
+

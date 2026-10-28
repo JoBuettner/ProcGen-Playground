@@ -1,0 +1,763 @@
+{
+  "binary_sha256": "07aab507a22141335beee0307c438d1ee037e577294227705e9974b3857957ef",
+  "source_archives": 11,
+  "numerical_relink_objects": 9,
+  "native_files": [
+    {
+      "path": "ProcGenPlayground.exe",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\build\\procgen-playground\\ProcGenPlayground.exe",
+      "origin": "PyInstaller generated application (bootloader exception)",
+      "wheel": null,
+      "bytes": 4743201,
+      "sha256": "5e203d6fb5b49c865402bbe81f5758577dfa54ab44936e3c0ca85f7bfde7d982"
+    },
+    {
+      "path": "_internal/procgen/data/prebuilt/env.dll",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\procgen\\data\\prebuilt\\env.dll",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "procgen",
+        "version": "0.10.7",
+        "record_hash_verified": true
+      },
+      "bytes": 10621440,
+      "sha256": "c4396f2f60405bae84863b8cefa441a869ed819d5daab4673fafacadd4bc97ff"
+    },
+    {
+      "path": "_internal/python310.dll",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\python310.dll",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 4471024,
+      "sha256": "34f0e44a0d089587e1ea48c1cc4c3164a1819c6db27a7c1b746af46d6388c26e"
+    },
+    {
+      "path": "_internal/numpy.libs/libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 38168576,
+      "sha256": "57b87772bf676b5c2d718c79dddc9f039d79ec3319fee1398cc305adff7b69e5"
+    },
+    {
+      "path": "_internal/_decimal.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_decimal.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 247024,
+      "sha256": "f7864b8b37715a87f4f11d5cbfefd5f1489399e064f7662fa0e0d7c5df59d5e4"
+    },
+    {
+      "path": "_internal/_hashlib.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_hashlib.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 59120,
+      "sha256": "df47255c100d9cc033a14c7d60051abe89c24da9c60362fe33cdf24c19651f7c"
+    },
+    {
+      "path": "_internal/_lzma.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_lzma.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 153328,
+      "sha256": "2e3fd65c4e02c99a61344ce59e09ec7fde74c671db5f82a891732e1140910f20"
+    },
+    {
+      "path": "_internal/_bz2.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_bz2.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 80112,
+      "sha256": "4b1d29f19adaf856727fa4a1f50eee0a86c893038dfba2e52f26c11ab5b3672f"
+    },
+    {
+      "path": "_internal/unicodedata.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\unicodedata.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 1117936,
+      "sha256": "89c93a672b649cd1e296499333df5b3d9ba2fd28f9280233b56441c69c126631"
+    },
+    {
+      "path": "_internal/select.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\select.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 25320,
+      "sha256": "b9ef1709ed4cd0fd72e4c4ba9b7702cb79d1619c11554ea06277f3dac21bd010"
+    },
+    {
+      "path": "_internal/_socket.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_socket.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 74480,
+      "sha256": "d0497b79345b2c255f6274baea6ac44b74f345e111ab25bf6c91af9b2a3f3b95"
+    },
+    {
+      "path": "_internal/_multiprocessing.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_multiprocessing.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 29928,
+      "sha256": "589c601f278025d8b3d4c8b17abbb962501e5057f250a0399a2a93300b3a7ffc"
+    },
+    {
+      "path": "_internal/pyexpat.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\pyexpat.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 191728,
+      "sha256": "66b14ebdd917f046315b666f841ea54a32760ecd624863071da8d3f1fd24459b"
+    },
+    {
+      "path": "_internal/_ssl.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_ssl.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 155888,
+      "sha256": "ba6025ab22d8e6c5ad53c66dc919f219a542e87540502905609b33dc0a8dddd8"
+    },
+    {
+      "path": "_internal/_ctypes.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_ctypes.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 119024,
+      "sha256": "e3b69285f27a8ad97555bebea29628a93333de203ee2fae95b73b6b6d6c162b1"
+    },
+    {
+      "path": "_internal/_queue.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_queue.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 26856,
+      "sha256": "9ad5bcf2a88e1ffff3b8ee29235dc92ce48b7fca4655e87cb6e4d71bd1150afb"
+    },
+    {
+      "path": "_internal/moderngl/mgl.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\moderngl\\mgl.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "moderngl",
+        "version": "5.13.0",
+        "record_hash_verified": true
+      },
+      "bytes": 165376,
+      "sha256": "46345aee38d47c33c29497bfb2fe180afe1571eeb94497ef2a6eab6b0fd6bffb"
+    },
+    {
+      "path": "_internal/glcontext/wgl.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\glcontext\\wgl.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "glcontext",
+        "version": "3.1.0",
+        "record_hash_verified": true
+      },
+      "bytes": 15360,
+      "sha256": "ed6cb98682f57ba9e4de11b1eb85c2d6c0ccab7b6ea9a95cd06a0564763c74dc"
+    },
+    {
+      "path": "_internal/_cffi_backend.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\_cffi_backend.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "cffi",
+        "version": "1.17.1",
+        "record_hash_verified": true
+      },
+      "bytes": 178176,
+      "sha256": "4f1ce205c2be986c9d38b951b6bcb6045eb363e06dacc069a41941f80be9068c"
+    },
+    {
+      "path": "_internal/_uuid.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_uuid.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 20720,
+      "sha256": "fe822f84185005b2f84189b51226a3591693ec7c936c2fc009139c36493f4cd8"
+    },
+    {
+      "path": "_internal/_overlapped.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_overlapped.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 45296,
+      "sha256": "155401462e95dbb1a6e45b0c0ffe0549f682bfeec39d4bb02c46c4cce5560cac"
+    },
+    {
+      "path": "_internal/_asyncio.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_asyncio.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 60656,
+      "sha256": "3ea0d07f4a434c172655e6e8012339486368d355c542606bc1bcbe0cabd7f874"
+    },
+    {
+      "path": "_internal/_sqlite3.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_sqlite3.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 93928,
+      "sha256": "89d32e0206c06cdd196c1dc97a7540d8893eb31ec4703c996494ac68ca62dc7d"
+    },
+    {
+      "path": "_internal/numpy/core/_multiarray_tests.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\core\\_multiarray_tests.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 65024,
+      "sha256": "03ad7f7642ff3e63686c64f4e82bfb20459feda8f0f8a209bbb443567edd0a18"
+    },
+    {
+      "path": "_internal/numpy/core/_multiarray_umath.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\core\\_multiarray_umath.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 2836480,
+      "sha256": "18cfaaff3a73ae7972b8a3707cf20fa58c36641bad0ad3406195c091d54b80fe"
+    },
+    {
+      "path": "_internal/numpy/linalg/_umath_linalg.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\linalg\\_umath_linalg.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 106496,
+      "sha256": "7699acfd30754298e74b4c5fa4a0b3eb273259620adfe79697c267479c7064b9"
+    },
+    {
+      "path": "_internal/numpy/random/mtrand.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\mtrand.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 595968,
+      "sha256": "d7599d4b503aa549e21594ff26537981daba7fab3f3a24e2b73dc87abdb22f39"
+    },
+    {
+      "path": "_internal/numpy/random/_sfc64.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\_sfc64.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 50688,
+      "sha256": "2339e313c992abe56f22e9125d795fa1647b3b62ed6c7ed0069f8b8bb73b1701"
+    },
+    {
+      "path": "_internal/numpy/random/_philox.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\_philox.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 69632,
+      "sha256": "616efd37524b4fd76c537788b7899a1b8fea4dca427770f97104898aad1084a1"
+    },
+    {
+      "path": "_internal/numpy/random/_pcg64.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\_pcg64.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 83456,
+      "sha256": "aa3c88741139f30391c3ac7fcfb8c6c28f9437f362b36206d2f1008c4dca8b4b"
+    },
+    {
+      "path": "_internal/numpy/random/_mt19937.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\_mt19937.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 76288,
+      "sha256": "68f43972832b086d22706d9fcb722efcaf8767f2390a87eb0c38ae4f312fa11d"
+    },
+    {
+      "path": "_internal/numpy/random/bit_generator.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\bit_generator.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 163840,
+      "sha256": "e72e9b51542a63376f43d15a7bd9d5b2700b058285e17a5a97a79cb5e0fb0aaf"
+    },
+    {
+      "path": "_internal/numpy/random/_generator.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\_generator.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 693248,
+      "sha256": "01b757cc35b3cb6dfef148b1f4b3f30bd5ee8fa89ab7f1e83255abde82880a64"
+    },
+    {
+      "path": "_internal/numpy/random/_bounded_integers.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\_bounded_integers.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 257024,
+      "sha256": "9c92722d8bc45cec75cfa9e950ffa252423eb635f25a4827e0de3bc9cdd48e0d"
+    },
+    {
+      "path": "_internal/numpy/random/_common.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\random\\_common.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 173568,
+      "sha256": "e27fa7bc227909592f2e794ecff5392f0929b22c2adc2bf1080e3cf2280b215d"
+    },
+    {
+      "path": "_internal/numpy/fft/_pocketfft_internal.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\numpy\\fft\\_pocketfft_internal.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "numpy",
+        "version": "1.26.4",
+        "record_hash_verified": true
+      },
+      "bytes": 110080,
+      "sha256": "f427bda65498f685dbc073af03900c35231c5b9f472f310eb03e7f156ffbb9e9"
+    },
+    {
+      "path": "_internal/PIL/_imaging.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\PIL\\_imaging.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "pillow",
+        "version": "12.3.0",
+        "record_hash_verified": true
+      },
+      "bytes": 2632192,
+      "sha256": "16a7c881fd3624c8428078ce24460861e91fc5cc43de1b3614dc2531fe327e2e"
+    },
+    {
+      "path": "_internal/PIL/_imagingmath.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\PIL\\_imagingmath.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "pillow",
+        "version": "12.3.0",
+        "record_hash_verified": true
+      },
+      "bytes": 21504,
+      "sha256": "91dbb83922daaa0a601b8a8282be60ebf7633a5b743565c3b579fcafda9b9094"
+    },
+    {
+      "path": "_internal/PIL/_webp.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\PIL\\_webp.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "pillow",
+        "version": "12.3.0",
+        "record_hash_verified": true
+      },
+      "bytes": 416256,
+      "sha256": "b2b263bd00abe0c1c120efca36f8050c161ce6dbbdb20bf940cc874cae01bac2"
+    },
+    {
+      "path": "_internal/PIL/_imagingtk.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\PIL\\_imagingtk.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "pillow",
+        "version": "12.3.0",
+        "record_hash_verified": true
+      },
+      "bytes": 14848,
+      "sha256": "832f6a7f22092fdc7962842170ebadd6ab844dc1f7b4d5582cdf547217ab00be"
+    },
+    {
+      "path": "_internal/PIL/_avif.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\PIL\\_avif.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "pillow",
+        "version": "12.3.0",
+        "record_hash_verified": true
+      },
+      "bytes": 7893504,
+      "sha256": "df0c617422668f1b1b5eece35a0689183942402a16632689d60c3d6488679bc8"
+    },
+    {
+      "path": "_internal/PIL/_imagingcms.cp310-win_amd64.pyd",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\lock-env\\Lib\\site-packages\\PIL\\_imagingcms.cp310-win_amd64.pyd",
+      "origin": "pinned installed wheel",
+      "wheel": {
+        "distribution": "pillow",
+        "version": "12.3.0",
+        "record_hash_verified": true
+      },
+      "bytes": 273408,
+      "sha256": "c92c55b43a774b8787a040afdd70c1c086daad5780c73efb35b029c219a03d5f"
+    },
+    {
+      "path": "_internal/_elementtree.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_elementtree.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 122088,
+      "sha256": "f93b90abffb837fd024e2a9a5dec8c9c79b275ae128065dac7623a2f9d974319"
+    },
+    {
+      "path": "_internal/_tkinter.pyd",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_tkinter.pyd",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 61160,
+      "sha256": "e616f850e6905d5f5f1c821a5c39360090444555c1444f97bd2313f4cb99aaf4"
+    },
+    {
+      "path": "_internal/libcrypto-1_1.dll",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libcrypto-1_1.dll",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 3429624,
+      "sha256": "664c3e52f914e351bb8a66ce2465ee0d40acab1d2a6b3167ae6acf6f1d1724d2"
+    },
+    {
+      "path": "_internal/libssl-1_1.dll",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libssl-1_1.dll",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 695032,
+      "sha256": "b7c0e42c1a60a2a062b899c8d4ebd0c50ef956177ba21785ce07c517c143aeaf"
+    },
+    {
+      "path": "_internal/libffi-7.dll",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libffi-7.dll",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 32792,
+      "sha256": "f60dd9f2fcbd495674dfc1555effb710eb081fc7d4cae5fa58c438ab50405081"
+    },
+    {
+      "path": "_internal/sqlite3.dll",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\sqlite3.dll",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 1465064,
+      "sha256": "20290d47f466c31d5f412eca9f412a9b1d45aa5c2be3d9719f9a12b970c635f4"
+    },
+    {
+      "path": "_internal/tk86t.dll",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\tk86t.dll",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 1541872,
+      "sha256": "cd2f60075064dfc2e65c88b239a970cb4bd07cb3eec7cc26fb1bf978d4356b08"
+    },
+    {
+      "path": "_internal/tcl86t.dll",
+      "source": "C:\\Users\\johbu\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\tcl86t.dll",
+      "origin": "CPython 3.10.1 installation",
+      "wheel": null,
+      "bytes": 1866480,
+      "sha256": "fbfd065f861ec0a90dd513bc209c56bbc23c54d2839964a0ec2df95848af7860"
+    },
+    {
+      "path": "_internal/msvcp140.dll",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\licensed-runtime\\vc14\\msvcp140.dll",
+      "origin": "controlled runtime manifest",
+      "wheel": null,
+      "bytes": 643512,
+      "sha256": "7c26614e1d733892c2deac7e245ce115504b1d80592dd0a01b08e3e5a55f89ca"
+    },
+    {
+      "path": "_internal/vcruntime140.dll",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\licensed-runtime\\vc14\\vcruntime140.dll",
+      "origin": "controlled runtime manifest",
+      "wheel": null,
+      "bytes": 178616,
+      "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7"
+    },
+    {
+      "path": "_internal/vcruntime140_1.dll",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\licensed-runtime\\vc14\\vcruntime140_1.dll",
+      "origin": "controlled runtime manifest",
+      "wheel": null,
+      "bytes": 50112,
+      "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
+    },
+    {
+      "path": "_internal/glfw/glfw3.dll",
+      "source": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\licensed-runtime\\glfw\\glfw3.dll",
+      "origin": "controlled runtime manifest",
+      "wheel": null,
+      "bytes": 226304,
+      "sha256": "9b8f4569f5355997acd58f0be1027ddc5277b6153dadb2d4eaa1c5bb75506445"
+    }
+  ],
+  "native_file_count": 54,
+  "export_check": {
+    "files_checked": 54,
+    "msvc14_imports": [
+      "msvcp140.dll",
+      "vcruntime140.dll",
+      "vcruntime140_1.dll"
+    ],
+    "missing_exports": [],
+    "runtime_version": "14.51.36247.0",
+    "toolset_checks": [
+      {
+        "path": "_internal/_asyncio.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_bz2.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_cffi_backend.cp310-win_amd64.pyd",
+        "linker_version": "14.41"
+      },
+      {
+        "path": "_internal/_ctypes.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_decimal.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_elementtree.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_hashlib.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_lzma.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_multiprocessing.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_overlapped.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_queue.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_socket.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_sqlite3.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_ssl.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_tkinter.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/_uuid.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/glcontext/wgl.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/glfw/glfw3.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/libcrypto-1_1.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/libffi-7.dll",
+        "linker_version": "14.16"
+      },
+      {
+        "path": "_internal/libssl-1_1.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/moderngl/mgl.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/msvcp140.dll",
+        "linker_version": "14.50"
+      },
+      {
+        "path": "_internal/numpy/core/_multiarray_tests.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/core/_multiarray_umath.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/fft/_pocketfft_internal.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/linalg/_umath_linalg.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/_bounded_integers.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/_common.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/_generator.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/_mt19937.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/_pcg64.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/_philox.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/_sfc64.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/bit_generator.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/numpy/random/mtrand.cp310-win_amd64.pyd",
+        "linker_version": "2.30"
+      },
+      {
+        "path": "_internal/PIL/_avif.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/PIL/_imaging.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/PIL/_imagingcms.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/PIL/_imagingmath.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/PIL/_imagingtk.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/PIL/_webp.cp310-win_amd64.pyd",
+        "linker_version": "14.51"
+      },
+      {
+        "path": "_internal/procgen/data/prebuilt/env.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/pyexpat.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/python310.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/select.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/sqlite3.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/tcl86t.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/tk86t.dll",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/unicodedata.pyd",
+        "linker_version": "14.29"
+      },
+      {
+        "path": "_internal/vcruntime140_1.dll",
+        "linker_version": "14.50"
+      }
+    ]
+  },
+  "qt_attribution_entries": 61,
+  "controlled_runtime_sha256": {
+    "msvcp140.dll": "7c26614e1d733892c2deac7e245ce115504b1d80592dd0a01b08e3e5a55f89ca",
+    "vcruntime140.dll": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+    "vcruntime140_1.dll": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
+  },
+  "glfw_sha256": "9b8f4569f5355997acd58f0be1027ddc5277b6153dadb2d4eaa1c5bb75506445",
+  "source_delivery": "paired actual archive, no written-offer fallback",
+  "desktop_verified": false,
+  "separate_pc_verified": false,
+  "source_checksum_sidecar": "ProcGenPlayground-corresponding-sources.zip.sha256"
+}

@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: LGPL-3.0-only
+# Qt 5.13.2 demonstration change, 2026-10-26. Not applied to the release engine.
+--- a/src/corelib/global/qglobal.cpp
++++ b/src/corelib/global/qglobal.cpp
+@@ -1155,4 +1155,4 @@
+ const char *qVersion() Q_DECL_NOTHROW
+ {
+-    return QT_VERSION_STR;
++    return "5.13.2-license-relink-check";
+ }

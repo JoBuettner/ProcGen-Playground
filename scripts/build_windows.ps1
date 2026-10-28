@@ -21,10 +21,14 @@ try {
     Invoke-Python -Arguments @('-m', 'pip', 'check')
     Invoke-Python -Arguments @('-m', 'pytest', '-q')
     Invoke-Python -Arguments @('-m', 'mypy')
+    Invoke-Python -Arguments @('scripts/prepare_license_sources.py', '--download')
+    Invoke-Python -Arguments @('scripts/prepare_windows_runtime.py', '--download')
     Invoke-Python -Arguments @('scripts/collect_licenses.py')
     Invoke-Python -Arguments @('scripts/verify_upstream.py')
     Invoke-Python -Arguments @('-m', 'PyInstaller', '--noconfirm', '--clean', 'packaging/procgen-playground.spec')
     Invoke-Python -Arguments @('scripts/package_portable.py')
+    Invoke-Python -Arguments @('scripts/package_sources.py')
+    Invoke-Python -Arguments @('scripts/verify_license_bundle.py')
     Invoke-Python -Arguments @('scripts/verify_frozen.py', '--all')
 }
 finally {

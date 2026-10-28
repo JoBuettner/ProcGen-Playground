@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-10-26",
+  "archives": [
+    {
+      "component": "OpenBLAS",
+      "revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "license": "BSD-3-Clause and LAPACK notices",
+      "url": "https://codeload.github.com/OpenMathLib/OpenBLAS/tar.gz/c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "purpose": "corresponding-source",
+      "local_path": ".artifacts/license-sources/numerical/OpenBLAS-c2f4bdbbb43a1d20a7342f40122e18e573ce436a.tar.gz",
+      "bytes": 24274239,
+      "sha256": "9c0f2b8d1f6839f8b0d1309417e06d38eabfa76ba52d9fe80f79df496d5afddc"
+    },
+    {
+      "component": "GCC, libgfortran and libquadmath",
+      "revision": "10.3.0",
+      "license": "mixed: GCC GPL with runtime exceptions; libquadmath LGPL-2.1-or-later",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz",
+      "purpose": "corresponding-source",
+      "local_path": ".artifacts/license-sources/numerical/gcc-10.3.0.tar.xz",
+      "bytes": 76692288,
+      "sha256": "64f404c1a650f27fc33da242e1f2df54952e3963a49e06e73f6940f3223ac344"
+    },
+    {
+      "component": "Rtools UCRT build recipes and GCC/MinGW patches",
+      "revision": "c5344cc8c7e310ee4eee513b2381af2e75d65cb9",
+      "license": "per-file upstream licenses",
+      "url": "https://codeload.github.com/r-windows/rtools-ucrt/zip/c5344cc8c7e310ee4eee513b2381af2e75d65cb9",
+      "purpose": "build-materials",
+      "local_path": ".artifacts/license-sources/numerical/rtools-ucrt-c5344cc8c7e310ee4eee513b2381af2e75d65cb9.zip",
+      "bytes": 143967,
+      "sha256": "981d23d4298d42a0efed97256d38272c0273094c9021c7d635675ef3a0653a04"
+    },
+    {
+      "component": "MinGW-w64 runtime and headers",
+      "revision": "acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679",
+      "license": "per-file MinGW-w64 notices",
+      "url": "https://codeload.github.com/mingw-w64/mingw-w64/tar.gz/acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679",
+      "purpose": "corresponding-source",
+      "local_path": ".artifacts/license-sources/numerical/mingw-w64-acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679.tar.gz",
+      "bytes": 13116265,
+      "sha256": "774ebdae72b9c514c375eddcf3bb75af4472498cad9ed8b0664f0fe37b7c17bb"
+    },
+    {
+      "component": "Historical Windows OpenBLAS builder",
+      "revision": "ab19bb248c8f62064d7b83d6f7427ee95eb02fab",
+      "license": "BSD-2-Clause and per-file notices; includes GPL-licensed objconv source tool",
+      "url": "https://codeload.github.com/MacPython/openblas-libs/zip/ab19bb248c8f62064d7b83d6f7427ee95eb02fab",
+      "purpose": "build-materials",
+      "local_path": ".artifacts/license-sources/numerical/openblas-libs-ab19bb248c8f62064d7b83d6f7427ee95eb02fab.zip",
+      "bytes": 414517,
+      "sha256": "aa75acc1c94fa613023ac92c8f398503317748e46dd03ae741b5fc185033934a"
+    },
+    {
+      "component": "NumPy source distribution",
+      "revision": "1.26.4",
+      "license": "BSD-3-Clause and per-file notices",
+      "url": "https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz",
+      "purpose": "corresponding-source",
+      "local_path": ".artifacts/license-sources/numerical/numpy-1.26.4.tar.gz",
+      "bytes": 15786129,
+      "sha256": "2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010"
+    },
+    {
+      "component": "Portable compiler and build-tool binaries (local build prerequisite only)",
+      "revision": "2022-02-06; UCRT GCC 10.3.0-9804",
+      "license": "mixed; not included in proposed source-only release bundle",
+      "url": "https://github.com/r-windows/rtools-installer/releases/download/2022-02-06/rtools40-x86_64.7z",
+      "purpose": "local-toolchain-not-for-redistribution",
+      "local_path": ".artifacts/license-sources/numerical/rtools40-2022-02-06-x86_64.7z",
+      "bytes": 218808742,
+      "sha256": "a44c6bf6099c5ed18e2feba5dd1fdc4a62a5fd1dc06683e39ca0f0d720af9a6a"
+    }
+  ],
+  "original_dll_evidence": {
+    "filename": "libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+    "sha256": "57b87772bf676b5c2d718c79dddc9f039d79ec3319fee1398cc305adff7b69e5",
+    "bytes": 38168576,
+    "pe_timestamp_utc": "2023-09-28T13:43:57+00:00",
+    "quadmath_symbols": [
+      {
+        "name": "__quadmath_do_pad",
+        "section": 1,
+        "value": 32291296,
+        "storage": 2
+      },
+      {
+        "name": "quadmath_snprintf",
+        "section": 1,
+        "value": 32292112,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_printf_fphex",
+        "section": 1,
+        "value": 32293120,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_printf_fp",
+        "section": 1,
+        "value": 32298976,
+        "storage": 2
+      },
+      {
+        "name": ".rdata$.refptr.__quadmath_fpioconst_pow10",
+        "section": 3,
+        "value": 364400,
+        "storage": 3
+      },
+      {
+        "name": ".rdata$.refptr.__quadmath_tens",
+        "section": 3,
+        "value": 364416,
+        "storage": 3
+      },
+      {
+        "name": "__quadmath_mpn_rshift",
+        "section": 1,
+        "value": 32308192,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_cmp",
+        "section": 1,
+        "value": 32308480,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_divrem",
+        "section": 1,
+        "value": 32308544,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_extract_flt128",
+        "section": 1,
+        "value": 32310400,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_lshift",
+        "section": 1,
+        "value": 32311136,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_mul_1",
+        "section": 1,
+        "value": 32311264,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_mul",
+        "section": 1,
+        "value": 32311424,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_submul_1",
+        "section": 1,
+        "value": 32312320,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_sub_n",
+        "section": 1,
+        "value": 32312496,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_addmul_1",
+        "section": 1,
+        "value": 32312560,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_add_n",
+        "section": 1,
+        "value": 32312720,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_impn_mul_n_basecase",
+        "section": 1,
+        "value": 32312784,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_mpn_impn_mul_n",
+        "section": 1,
+        "value": 32313040,
+        "storage": 2
+      },
+      {
+        "name": ".refptr.__quadmath_fpioconst_pow10",
+        "section": 3,
+        "value": 364400,
+        "storage": 2
+      },
+      {
+        "name": ".refptr.__quadmath_tens",
+        "section": 3,
+        "value": 364416,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_tens",
+        "section": 3,
+        "value": 349056,
+        "storage": 2
+      },
+      {
+        "name": "__quadmath_fpioconst_pow10",
+        "section": 3,
+        "value": 348672,
+        "storage": 2
+      }
+    ]
+  },
+  "source_note": "Source archives and recipes preserved locally; see NUMERICAL-SOURCES.md for exact build/relink evidence and limitations."
+}

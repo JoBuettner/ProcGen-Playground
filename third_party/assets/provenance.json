@@ -1,0 +1,22 @@
+[
+  {
+    "filename": "OGA-BY-3.0.txt",
+    "url": "https://static.opengameart.org/OGA-BY-3.0.txt",
+    "sha256": "a88798a4f7ec10432d3ed2bf92e4a7ecae0db1e4b55f29c160cb8689201efdad"
+  },
+  {
+    "filename": "CC-BY-3.0.txt",
+    "url": "https://raw.githubusercontent.com/creativecommons/cc-legal-tools-data/main/docs/licenses/by/3.0/legalcode.txt",
+    "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+  },
+  {
+    "filename": "CC-BY-4.0.txt",
+    "url": "https://raw.githubusercontent.com/creativecommons/cc-legal-tools-data/main/docs/licenses/by/4.0/legalcode.txt",
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+  },
+  {
+    "filename": "CC0-1.0.txt",
+    "url": "https://raw.githubusercontent.com/creativecommons/cc-legal-tools-data/main/docs/publicdomain/zero/1.0/legalcode.txt",
+    "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+  }
+]

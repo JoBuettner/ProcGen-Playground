@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "filename": "qtbase-everywhere-src-5.13.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.13/5.13.2/submodules/qtbase-everywhere-src-5.13.2.tar.xz",
+      "sha256": "26b6b686d66a7ad28eaca349e55e2894e5a735f3831e45f2049e93b1daa92121",
+      "bytes": 48735704,
+      "cache_path": ".artifacts/license-sources/qt/qtbase-everywhere-src-5.13.2.tar.xz",
+      "component": "Qt 5.13.2"
+    },
+    {
+      "filename": "procgen-5e1dbf341d291eff40d1f9e0c0a0d5003643aebf.tar.gz",
+      "url": "https://codeload.github.com/openai/procgen/tar.gz/5e1dbf341d291eff40d1f9e0c0a0d5003643aebf",
+      "sha256": "46630fbfb6efbf8a2910104ace31a99025aad806dd996de0e49daaa7e7f757c8",
+      "bytes": 32260121,
+      "cache_path": ".artifacts/license-sources/qt/procgen-5e1dbf341d291eff40d1f9e0c0a0d5003643aebf.tar.gz",
+      "component": "ProcGen 0.10.7"
+    },
+    {
+      "filename": "gym3-2ed9d344ede8bbd96b6280e9fbbbf55861ea33a9.tar.gz",
+      "url": "https://codeload.github.com/openai/gym3/tar.gz/2ed9d344ede8bbd96b6280e9fbbbf55861ea33a9",
+      "sha256": "ad46835a1dd6e15257928de9855eda0dc7e49a47d7a682ccaf6c1ff33e8dd7a0",
+      "bytes": 49588,
+      "cache_path": ".artifacts/license-sources/qt/gym3-2ed9d344ede8bbd96b6280e9fbbbf55861ea33a9.tar.gz",
+      "component": "gym3 0.3.3"
+    },
+    {
+      "filename": "glfw-3.3.2.zip",
+      "component": "GLFW 3.3.2",
+      "cache_path": ".artifacts/license-sources/glfw/glfw-3.3.2.zip",
+      "url": "https://codeload.github.com/glfw/glfw/zip/refs/tags/3.3.2",
+      "sha256": "33c6bfc422ca7002befbb39a7a60dc101d32c930ee58be532ffbcd52e9635812",
+      "bytes": 859713,
+      "revision": "76dfe13e4ee7c739156260053bc40c938679c754"
+    },
+    {
+      "component": "OpenBLAS",
+      "revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "license": "BSD-3-Clause and LAPACK notices",
+      "url": "https://codeload.github.com/OpenMathLib/OpenBLAS/tar.gz/c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "purpose": "corresponding-source",
+      "bytes": 24274239,
+      "sha256": "9c0f2b8d1f6839f8b0d1309417e06d38eabfa76ba52d9fe80f79df496d5afddc",
+      "cache_path": ".artifacts/license-sources/numerical/OpenBLAS-c2f4bdbbb43a1d20a7342f40122e18e573ce436a.tar.gz",
+      "filename": "OpenBLAS-c2f4bdbbb43a1d20a7342f40122e18e573ce436a.tar.gz"
+    },
+    {
+      "component": "GCC, libgfortran and libquadmath",
+      "revision": "10.3.0",
+      "license": "mixed: GCC GPL with runtime exceptions; libquadmath LGPL-2.1-or-later",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz",
+      "purpose": "corresponding-source",
+      "bytes": 76692288,
+      "sha256": "64f404c1a650f27fc33da242e1f2df54952e3963a49e06e73f6940f3223ac344",
+      "cache_path": ".artifacts/license-sources/numerical/gcc-10.3.0.tar.xz",
+      "filename": "gcc-10.3.0.tar.xz"
+    },
+    {
+      "component": "Rtools UCRT build recipes and GCC/MinGW patches",
+      "revision": "c5344cc8c7e310ee4eee513b2381af2e75d65cb9",
+      "license": "per-file upstream licenses",
+      "url": "https://codeload.github.com/r-windows/rtools-ucrt/zip/c5344cc8c7e310ee4eee513b2381af2e75d65cb9",
+      "purpose": "build-materials",
+      "bytes": 143967,
+      "sha256": "981d23d4298d42a0efed97256d38272c0273094c9021c7d635675ef3a0653a04",
+      "cache_path": ".artifacts/license-sources/numerical/rtools-ucrt-c5344cc8c7e310ee4eee513b2381af2e75d65cb9.zip",
+      "filename": "rtools-ucrt-c5344cc8c7e310ee4eee513b2381af2e75d65cb9.zip"
+    },
+    {
+      "component": "MinGW-w64 runtime and headers",
+      "revision": "acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679",
+      "license": "per-file MinGW-w64 notices",
+      "url": "https://codeload.github.com/mingw-w64/mingw-w64/tar.gz/acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679",
+      "purpose": "corresponding-source",
+      "bytes": 13116265,
+      "sha256": "774ebdae72b9c514c375eddcf3bb75af4472498cad9ed8b0664f0fe37b7c17bb",
+      "cache_path": ".artifacts/license-sources/numerical/mingw-w64-acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679.tar.gz",
+      "filename": "mingw-w64-acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679.tar.gz"
+    },
+    {
+      "component": "Historical Windows OpenBLAS builder",
+      "revision": "ab19bb248c8f62064d7b83d6f7427ee95eb02fab",
+      "license": "BSD-2-Clause and per-file notices; includes GPL-licensed objconv source tool",
+      "url": "https://codeload.github.com/MacPython/openblas-libs/zip/ab19bb248c8f62064d7b83d6f7427ee95eb02fab",
+      "purpose": "build-materials",
+      "bytes": 414517,
+      "sha256": "aa75acc1c94fa613023ac92c8f398503317748e46dd03ae741b5fc185033934a",
+      "cache_path": ".artifacts/license-sources/numerical/openblas-libs-ab19bb248c8f62064d7b83d6f7427ee95eb02fab.zip",
+      "filename": "openblas-libs-ab19bb248c8f62064d7b83d6f7427ee95eb02fab.zip"
+    },
+    {
+      "component": "NumPy source distribution",
+      "revision": "1.26.4",
+      "license": "BSD-3-Clause and per-file notices",
+      "url": "https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz",
+      "purpose": "corresponding-source",
+      "bytes": 15786129,
+      "sha256": "2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010",
+      "cache_path": ".artifacts/license-sources/numerical/numpy-1.26.4.tar.gz",
+      "filename": "numpy-1.26.4.tar.gz"
+    },
+    {
+      "filename": "cffi-1.17.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz",
+      "sha256": "1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824",
+      "cache_path": ".artifacts/license-sources/cffi/cffi-1.17.1.tar.gz",
+      "component": "CFFI 1.17.1 including bundled x86/x64 libffi",
+      "bytes": 516621,
+      "revision": "1.17.1",
+      "purpose": "supplemental permissive component source"
+    }
+  ]
+}

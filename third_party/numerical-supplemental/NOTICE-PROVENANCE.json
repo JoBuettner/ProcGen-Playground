@@ -1,0 +1,38 @@
+{
+  "source_revision": "acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679",
+  "archive": "mingw-w64-acc9b9d9eb63a13d8122cbac4882eb5f4ee2f679.tar.gz",
+  "files": [
+    {
+      "file": "MinGW-w64-COPYING.txt",
+      "source_path": "COPYING",
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+    },
+    {
+      "file": "MinGW-w64-runtime.txt",
+      "source_path": "COPYING.MinGW-w64-runtime/COPYING.MinGW-w64-runtime.txt",
+      "sha256": "e9b2dc02451ea29092a1f25fa0f3c07207ed421f1807dffb0c4e6dce69dee7bd"
+    },
+    {
+      "file": "MinGW-w64-AUTHORS.txt",
+      "source_path": "AUTHORS",
+      "sha256": "8f308316e7a94b8410f871868bd3948f126526dc1775aeee97a0e365f9a0fd9f"
+    },
+    {
+      "file": "winpthreads-COPYING.txt",
+      "source_path": "mingw-w64-libraries/winpthreads/COPYING",
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177"
+    },
+    {
+      "file": "GCC-COPYING3.txt",
+      "source_path": "COPYING3",
+      "source_archive": "gcc-10.3.0.tar.xz",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "file": "GCC-RUNTIME-EXCEPTION.txt",
+      "source_path": "COPYING.RUNTIME",
+      "source_archive": "gcc-10.3.0.tar.xz",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    }
+  ]
+}

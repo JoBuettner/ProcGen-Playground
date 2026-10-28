@@ -9,8 +9,41 @@ permissions:
   contents: read
 
 jobs:
-  portable:
+  checks:
     runs-on: windows-2022
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.10.1'
+          architecture: x64
+      - name: Install hashed dependencies and check source
+        run: |
+          python -m venv .venv
+          if ($LASTEXITCODE -ne 0) { throw 'venv failed' }
+          .\.venv\Scripts\python.exe -m pip install --require-hashes -r requirements-bootstrap.lock
+          if ($LASTEXITCODE -ne 0) { throw 'Bootstrap installation failed' }
+          .\.venv\Scripts\python.exe -m pip install --require-hashes --no-build-isolation -r requirements-windows.lock
+          if ($LASTEXITCODE -ne 0) { throw 'Dependency installation failed' }
+          .\.venv\Scripts\python.exe -m pytest -q
+          if ($LASTEXITCODE -ne 0) { throw 'Tests failed' }
+          .\.venv\Scripts\python.exe -m mypy
+          if ($LASTEXITCODE -ne 0) { throw 'Types failed' }
+  portable:
+    # Only manually dispatched trusted runs use a self-hosted packaging runner;
+    # pull requests run the hosted checks above.
+    if: github.event_name == 'workflow_dispatch'
+    needs: checks
+    # The redistributable files/compiler are intentionally taken from the pinned
+    # licensed VS2019 installation, not ambient hosted-runner DLL caches.
+    # Configure a matching Windows runner before enabling this packaging job.
+    runs-on: [self-hosted, Windows, X64, procgen-vs2019]
     timeout-minutes: 30
     defaults:
       run:
@@ -42,6 +75,9 @@ jobs:
           path: |
             dist/ProcGenPlayground-Windows-x64-portable.zip
             dist/ProcGenPlayground-Windows-x64-portable.zip.sha256
+            dist/ProcGenPlayground-corresponding-sources.zip
+            dist/ProcGenPlayground-corresponding-sources.zip.sha256
+            .artifacts/license-bundle-verification.json
             .artifacts/upstream-smoke.json
             .artifacts/frozen-verification.json
           include-hidden-files: true

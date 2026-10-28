@@ -5,6 +5,8 @@ from __future__ import annotations
 import hashlib
 import importlib.metadata
 import platform
+from pathlib import Path
+import os
 import sys
 from typing import Any
 
@@ -16,6 +18,14 @@ def verify_engine(config: LaunchConfig) -> dict[str, Any]:
     resources = check_resources()
     import numpy as np
     from procgen import ProcgenGym3Env
+
+    viewer = None
+    if getattr(sys, "frozen", False):
+        import glfw
+
+        library = Path(os.environ["PYGLFW_LIBRARY"])
+        viewer = {"version": glfw.get_version_string().decode("ascii"), "path": str(library),
+                  "sha256": hashlib.sha256(library.read_bytes()).hexdigest()}
 
     options = config.environment_options()
     if config.vision == "human":
@@ -42,6 +52,7 @@ def verify_engine(config: LaunchConfig) -> dict[str, Any]:
             "procgen": importlib.metadata.version("procgen"),
             "python": sys.version, "platform": platform.platform(),
             "frozen": bool(getattr(sys, "frozen", False)), "resources": str(resources),
+            "viewer_library": viewer,
         }
     finally:
         env.close()

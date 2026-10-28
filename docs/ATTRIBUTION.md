@@ -8,8 +8,9 @@ is not wholly MIT.
 This application uses **Qt 5.13.2**, statically linked into ProcGen's `env.dll`,
 under the LGPLv3 open-source option. Qt is copyright The Qt Company and other
 contributors. LGPLv3 and GPLv3 texts are in `third_party/qt/`. Corresponding
-source and relinking materials are still being prepared; this development
-artifact is not yet cleared for public redistribution. See `LICENSE-AUDIT.md`.
+source and relinking materials are provided in the matching actual
+`ProcGenPlayground-corresponding-sources.zip`; see `SOURCE-COMPANION.md` and
+`REDISTRIBUTION.md`. Preserve access to that source archive with the binary.
 
 ## ProcGen
 
@@ -55,9 +56,10 @@ Additional native/font notices:
 - NumPy's combined notice includes OpenBLAS, LAPACK and the GCC runtime with
   its exception. Separately, libquadmath statically included in OpenBLAS is
   LGPL-2.1-or-later (`third_party/numpy/LGPL-2.1.txt`); its source/relinking
-  review is still open. Pillow's combined notice includes its codec
+  sources, build/relink helpers and replacement evidence are in the companion.
+  Pillow's combined notice includes its codec
   and font-library terms. For FreeType we use the permissive FreeType License
-  alternative: portions of this software are copyright The FreeType Project
+  alternative: portions of this software are copyright (c) 2000-2026 The FreeType Project
   (www.freetype.org). All rights reserved.
 - This product includes software developed by the OpenSSL Project for use in
   the OpenSSL Toolkit (http://www.openssl.org/), and cryptographic software
@@ -66,7 +68,17 @@ Additional native/font notices:
   notices are in `third_party/python/`.
 - Microsoft VC/UCRT binaries have Microsoft redistribution terms, not MIT.
 
-**Public release gates:** corresponding Qt source/relinking materials, complete
-Qt subcomponent inventory, libquadmath source/relinking review, and Microsoft runtime redistribution provenance and
-terms. See the audit for exact findings and remaining work. No public release
-has been published. Supplemental notice provenance: `third_party/NOTICE-SOURCES.md`.
+Supplemental Qt notices preserve the complete qtbase attribution superset,
+including full license texts. Numerical supplements cover MinGW-w64, pthread,
+OpenBLAS x64/LAPACKE and GCC notices absent from the wheel's aggregate notice.
+The same-version GLFW library was rebuilt from unchanged 3.3.2 source using
+VS2019/VC14, removing the old VC11 dependency. Three signed, hash-locked VC14
+DLLs come from a hash-locked official Microsoft VC14 redistribution package,
+under the installed Visual Studio Community open-source development route.
+Microsoft-only terms are in `third_party/microsoft/DOWNSTREAM-TERMS.md` and are
+prominently communicated in the portable README and THIRD-PARTY-NOTICES.txt.
+
+No public release has been published. Final desktop/separate-PC acceptance and
+publication of the binary/source pair remain release steps. Current technical
+redistribution preparation: `REDISTRIBUTION.md`. Supplemental notice provenance:
+`third_party/NOTICE-SOURCES.md`.

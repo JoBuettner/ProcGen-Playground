@@ -36,11 +36,13 @@ No public release/tag has been published.
 - [x] Audit package licenses and identify native/font/asset exceptions
 - [x] Include supplemental gym3/font, native GLFW, Qt and Python notices
 - [x] Exclude unused GPL-enabled FFmpeg and enforce exclusion in artifact checks
-- [ ] Supply and verify Qt corresponding-source and relinking materials
-- [ ] Complete Qt embedded-component inventory from build/configuration evidence
-- [ ] Resolve static libquadmath LGPL source/relinking requirements in NumPy's DLL
-- [ ] Verify Microsoft runtime provenance, applicable redistribution rights/notices
-- [ ] Final review of all upstream code, font and asset attributions
+- [x] Supply Qt corresponding-source and rebuild/relink materials; modified replacement tested
+- [x] Preserve complete qtbase notices/attributions with actual build configuration
+- [x] Supply static libquadmath sources, build/relink helpers and replacement materials
+- [x] Verify Microsoft runtime provenance and include applicable redistribution conditions
+- [x] Include upstream code, font, asset and native-component notices
+- [x] Verify current binary/source ZIP pairing and checksums (repeat for any changed release candidate)
+- [ ] Publish matching source/binary ZIPs together, retain source access, prominently communicate Microsoft-only agreement terms
 - [ ] Capture actual SmartScreen/antivirus behavior; never advise disabling protections
 - [ ] Publish notes, checksums, tested platforms, requirements, known limitations
 - [ ] Gate tag publication on tests **and** recorded desktop validation

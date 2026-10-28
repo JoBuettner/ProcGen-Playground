@@ -17,6 +17,8 @@ def main() -> None:
     # Readme and wrapper license are also available without browsing _internal.
     for filename in ("README.md", "LICENSE"):
         (folder / filename).write_bytes((ROOT / filename).read_bytes())
+    (folder / "THIRD-PARTY-NOTICES.txt").write_bytes(
+        (ROOT / "docs/licensing/THIRD-PARTY-NOTICES.txt").read_bytes())
     archive_path = dist / "ProcGenPlayground-Windows-x64-portable.zip"
     with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(folder.rglob("*")):

@@ -1,0 +1,14 @@
+{
+  "source_archive": {
+    "filename": "cffi-1.17.1.tar.gz",
+    "url": "https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz",
+    "sha256": "1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824",
+    "cache_path": ".artifacts/license-sources/cffi/cffi-1.17.1.tar.gz",
+    "component": "CFFI 1.17.1 including bundled x86/x64 libffi",
+    "bytes": 516621,
+    "revision": "1.17.1",
+    "purpose": "supplemental permissive component source"
+  },
+  "notice": "libffi-x86-x64-NOTICES.md",
+  "extraction": "Original leading copyright/license comment blocks from src/c/libffi_x86_x64/*.c and *.h; ASM has no separate license header"
+}

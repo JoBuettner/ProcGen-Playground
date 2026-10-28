@@ -11,7 +11,9 @@ discover the existing interpreter, so the commands use `python` directly.
 ProcGen wheel: `procgen-0.10.7-cp310-cp310-win_amd64.whl`.
 The upstream tag `0.10.7` resolves to commit
 `5e1dbf341d291eff40d1f9e0c0a0d5003643aebf`.
-No upstream source or binary is modified.
+The ProcGen engine, Python packages and game assets remain unmodified.
+The native GLFW viewer is rebuilt from the same unmodified 3.3.2 source with
+VC14 to remove its separate VC11 redistribution dependency.
 
 ## Set up
 
@@ -39,13 +41,25 @@ claimed (build tools and timestamps can affect them).
 
 ## Verify and build
 
+Packaging also requires an installed Visual Studio 2022 Community entitlement for
+this MIT open-source application, the pinned official x64 VC14 runtime package,
+v142 C++ tools, Windows SDK **10.0.19041.0**, and the VS2019 CMake component.
+The selected runtime must be at least as recent as the newest runtime-dependent
+MSVC toolset in the bundle. The exact runtime hashes, entitlement route and
+same-version GLFW build are documented in
+`licensing/MICROSOFT-RUNTIME.md`. The build fails if those inputs are absent;
+it does not substitute DLLs from ambient PATH caches or install system runtimes.
+
 ```powershell
 .\scripts\build_windows.ps1
 ```
 
 The script fails on an unsuccessful native command. It checks Python, package
 consistency, unit tests, types, licenses, and all 96 original-package native
-cases; builds the windowed executable; creates the portable ZIP and checksum;
+cases; verifies/downloads pinned source archives at build time; stages the
+controlled CRT and rebuilds GLFW; builds the windowed executable; creates both
+the portable ZIP and actual corresponding-source companion with checksums;
+verifies source/binary pairing, notice coverage and native-file provenance;
 then extracts it into a directory containing spaces and non-ASCII characters
 and compares 96 packaged cases against the upstream results.
 
@@ -54,7 +68,24 @@ Outputs:
 - `dist/ProcGenPlayground/ProcGenPlayground.exe` and its adjacent `_internal/`
 - `dist/ProcGenPlayground-Windows-x64-portable.zip`
 - `dist/ProcGenPlayground-Windows-x64-portable.zip.sha256`
+- `dist/ProcGenPlayground-corresponding-sources.zip`
+- `dist/ProcGenPlayground-corresponding-sources.zip.sha256`
+- `.artifacts/license-bundle-verification.json`
 - `.artifacts/upstream-smoke.json` and `.artifacts/frozen-verification.json`
+
+The source companion contains actual pinned archives, this project's source,
+notices and rebuild/relink instructions. The prepared local companion also
+includes verified OpenBLAS application objects. A fresh clone can build the
+complete source-only companion without those optional generated objects;
+`scripts/package_sources.py` rejects a partial or hash-mismatched object set.
+To recreate the faster object shortcut, follow
+`licensing/numerical-relink/README.md`; compiler binaries are obtained separately.
+No source or toolchain is downloaded or compiled during gameplay.
+
+GitHub Actions runs source checks on hosted Windows runners. Portable packaging
+is manual-dispatch only on a trusted self-hosted runner labelled
+`procgen-vs2019` with the controlled prerequisites above. No remote/runner is
+configured in this workspace and no GitHub CI success is claimed.
 
 Native verification strips Python, virtual-environment, GLFW, and GLContext
 environment overrides; PATH contains only Windows System32. It checks that
@@ -104,8 +135,9 @@ fix every random choice or promise an identical complete gameplay trajectory.
    links Qt; its PE imports also require Visual C++ runtimes. PyInstaller
    collects the runtime DLLs into `_internal`; clean-machine loading still
    needs desktop verification.
-   The native license/source audit is in `LICENSE-AUDIT.md`; MIT on the launcher
-   does not clear Qt's static-link or Microsoft redistribution requirements.
+   The original audit is in `LICENSE-AUDIT.md`; completed source/notices/runtime
+   preparation is documented in `licensing/REDISTRIBUTION.md`. MIT on the
+   launcher does not replace dependency distribution requirements.
 3. The visible upstream game window uses gym3's GLFW/OpenGL 3.3 renderer, which
    dynamically loads GLFW and ModernGL. `gym3/internal/font.bin` and `libenv.h`
    are required alongside its Python code.

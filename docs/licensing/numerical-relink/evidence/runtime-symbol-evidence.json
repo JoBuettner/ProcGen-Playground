@@ -1,0 +1,770 @@
+{
+  "original_dll": ".venv\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+  "defined_runtime_symbols": [
+    {
+      "name": "__gcc_register_frame",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__gcc_deregister_frame",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_v.y_dummy",
+      "section": 2,
+      "storage": 3
+    },
+    {
+      "name": "__emutls_t.thread_unit",
+      "section": 3,
+      "storage": 3
+    },
+    {
+      "name": "__mingw_strtod",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_strtof",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_strtold",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_snprintf",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_vfprintf",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_vsnprintf",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_vsprintf",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_pformat",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_hexdig_init_D2A",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_condattr_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_condattr_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_condattr_getpshared",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_condattr_getclock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_condattr_setclock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_condattr_setpshared",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cond_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cond_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cond_signal",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cond_broadcast",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cond_wait",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cond_timedwait_impl",
+      "section": 1,
+      "storage": 3
+    },
+    {
+      "name": "pthread_cond_timedwait",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cond_timedwait_relative_np",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutex_lock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutex_timedlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutex_unlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutex_trylock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutex_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutex_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_gettype",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_settype",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_getpshared",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_setpshared",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_getprotocol",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_setprotocol",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_getprioceiling",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_mutexattr_setprioceiling",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_spin_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_spin_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_spin_lock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_spin_trylock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_spin_unlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_tls_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_tls_init.cold",
+      "section": 1,
+      "storage": 3
+    },
+    {
+      "name": "pthread_create_wrapper",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_timechange_handler_np",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_num_processors_np",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_set_num_processors_np",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_once",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_once.cold",
+      "section": 1,
+      "storage": 3
+    },
+    {
+      "name": "pthread_key_create",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_key_delete",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_getspecific",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_setspecific",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_equal",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_self",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_getevent",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_gethandle",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_getclean",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_get_concurrency",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_set_concurrency",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_exit",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_testcancel",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_delay_np",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_delay_np_ms",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_cancel",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_kill",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setdetachstate",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getdetachstate",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setinheritsched",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getinheritsched",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setscope",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getscope",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getstack",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setstack",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getstackaddr",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setstackaddr",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getstacksize",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setstacksize",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_setcancelstate",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_setcanceltype",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_create",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_join",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_detach",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_getconcurrency",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_setconcurrency",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_setname_np",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_getname_np",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setschedparam",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getschedparam",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_setschedpolicy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_attr_getschedpolicy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_getschedparam",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_setschedparam",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_rdlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_timedrdlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_tryrdlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_trywrlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_unlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_wrlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlock_timedwrlock",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlockattr_destroy",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlockattr_init",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlockattr_getpshared",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "pthread_rwlockattr_setpshared",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_raise_matherr",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_setusermatherr",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_TLScallback",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_GetSectionForAddress",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_GetSectionCount",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_enum_import_library_names",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_ForcedUnwind_Phase2",
+      "section": 1,
+      "storage": 3
+    },
+    {
+      "name": "_Unwind_GetGR",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_SetGR",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_GetCFA",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_GetIP",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_GetIPInfo",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_SetIP",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_GetLanguageSpecificData",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_GetRegionStart",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_FindEnclosingFunction",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_GetDataRelBase",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_GetTextRelBase",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_RaiseException",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_Resume",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_Resume_or_Rethrow",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_ForcedUnwind",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_DeleteException",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "_Unwind_Backtrace",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__emutls_get_address",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__emutls_register_common",
+      "section": 1,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_module_is_dll",
+      "section": 2,
+      "storage": 2
+    },
+    {
+      "name": "__mingw_oldexcpt_handler",
+      "section": 6,
+      "storage": 2
+    },
+    {
+      "name": "__emutls_v.thread_unit",
+      "section": 2,
+      "storage": 2
+    }
+  ]
+}

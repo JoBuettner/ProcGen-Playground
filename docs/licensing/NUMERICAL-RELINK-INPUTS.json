@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "created_on": "2026-10-28",
+  "built_on": "2026-10-26",
+  "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+  "source_archive": "OpenBLAS-c2f4bdbbb43a1d20a7342f40122e18e573ce436a.tar.gz",
+  "original_dll_sha256": "57b87772bf676b5c2d718c79dddc9f039d79ec3319fee1398cc305adff7b69e5",
+  "build_script": "docs/licensing/numerical-relink/rebuild-openblas.sh",
+  "relink_script": "docs/licensing/numerical-relink/relink-objects.sh",
+  "toolchain": "Separately obtained Rtools 2022-02-06 UCRT GCC/GFortran 10.3.0-9804; no toolchain binaries in these inputs",
+  "note": "Static archive contains application objects before GNU runtime libraries are resolved by the DLL link. Configuration files are build records; the object-only relink uses portable paths. Full sources and notices remain required.",
+  "files": [
+    {
+      "filename": "OpenBLAS-application-objects.a",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/OpenBLAS-application-objects.a",
+      "archive_path": "generated/numerical/OpenBLAS-application-objects.a",
+      "bytes": 45270754,
+      "sha256": "08cd5d3b569dd5904d60ce991207a4be4679420728fcd92043618eea40faa992",
+      "role": "application-object-archive",
+      "license": "OpenBLAS/LAPACK BSD licenses and per-file notices",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": ".artifacts/license-sources/numerical/build/openblas/libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0p-r0.3.23.dev.a"
+    },
+    {
+      "filename": "OpenBLAS-exports.def",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/OpenBLAS-exports.def",
+      "archive_path": "generated/numerical/OpenBLAS-exports.def",
+      "bytes": 301222,
+      "sha256": "19e1d0235d6d2eaedbe5a73b8de578ae5b43b3424ee4bb467df99c69cee883b9",
+      "role": "generated-export-definition",
+      "license": "generated from OpenBLAS BSD-licensed source",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": ".artifacts/license-sources/numerical/build/openblas/exports/libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0.def"
+    },
+    {
+      "filename": "dllinit.obj",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/dllinit.obj",
+      "archive_path": "generated/numerical/dllinit.obj",
+      "bytes": 602,
+      "sha256": "062c5a2b046aad1362c05e73345fece7c9b3ddfa60425e871b220210a32fb7ce",
+      "role": "application-startup-object",
+      "license": "University of Texas at Austin BSD-2-Clause",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": ".artifacts/license-sources/numerical/build/openblas/exports/dllinit.obj"
+    },
+    {
+      "filename": "OpenBLAS-Makefile.conf",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/OpenBLAS-Makefile.conf",
+      "archive_path": "generated/numerical/OpenBLAS-Makefile.conf",
+      "bytes": 2927,
+      "sha256": "4f7f4055e9f1d97799991f8fe43e5f7c4f7b6bcf0435ee608cd496abb88a6789",
+      "role": "build-configuration-reference",
+      "license": "generated from OpenBLAS BSD-licensed source",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": ".artifacts/license-sources/numerical/build/openblas/Makefile.conf"
+    },
+    {
+      "filename": "OpenBLAS-config.h",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/OpenBLAS-config.h",
+      "archive_path": "generated/numerical/OpenBLAS-config.h",
+      "bytes": 733,
+      "sha256": "8397f4ce7586d1f1c4559e060689cd06f87897ec69a48365fa50802ae5e00a07",
+      "role": "build-configuration-reference",
+      "license": "generated from OpenBLAS BSD-licensed source",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": ".artifacts/license-sources/numerical/build/openblas/config.h"
+    },
+    {
+      "filename": "OpenBLAS-LICENSE.txt",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/OpenBLAS-LICENSE.txt",
+      "archive_path": "generated/numerical/OpenBLAS-LICENSE.txt",
+      "bytes": 1548,
+      "sha256": "190b5a9c8d9723fe958ad33916bd7346d96fab3c5ea90832bb02d854f620fcff",
+      "role": "license-notice",
+      "license": "BSD-3-Clause",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": ".artifacts/license-sources/numerical/build/openblas/LICENSE"
+    },
+    {
+      "filename": "LAPACK-LICENSE.txt",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/LAPACK-LICENSE.txt",
+      "archive_path": "generated/numerical/LAPACK-LICENSE.txt",
+      "bytes": 2266,
+      "sha256": "d56bd4441b999b80c88df04faf0d8b3d7d3b2bd781cf91242c4188e8a6d0f8be",
+      "role": "license-notice",
+      "license": "LAPACK BSD-3-Clause",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": ".artifacts/license-sources/numerical/build/openblas/lapack-netlib/LICENSE"
+    },
+    {
+      "filename": "OpenBLAS-source-notices.txt",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/OpenBLAS-source-notices.txt",
+      "archive_path": "generated/numerical/OpenBLAS-source-notices.txt",
+      "bytes": 91429,
+      "sha256": "da3ed58e057c12b15febfd09c4634207f63f29ef911ce3e8be54f39a445b3a4c",
+      "role": "license-notice",
+      "license": "per-file BSD license notices",
+      "source_revision": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "build_output_path": "third_party/numerical-supplemental/OpenBLAS-x64-source-notices.txt"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "local_path": ".artifacts/license-sources/numerical/relink-inputs/SHA256SUMS",
+      "archive_path": "generated/numerical/SHA256SUMS",
+      "bytes": 701,
+      "sha256": "312e557c55eed921c2bcdaf2445271950cbd91a45bd72238714e3548b0ecec95",
+      "role": "relink-input-checksums",
+      "license": "MIT"
+    }
+  ],
+  "verified_on": "2026-10-28",
+  "verification_status": "passed",
+  "verification_reports": [
+    "docs/licensing/numerical-relink/evidence/ordinary-rebuild-verification.json",
+    "docs/licensing/numerical-relink/evidence/relink-verification.json",
+    "docs/licensing/numerical-relink/evidence/object-relink-verification.json",
+    "docs/licensing/numerical-relink/evidence/clean-preparation-verification.json"
+  ]
+}

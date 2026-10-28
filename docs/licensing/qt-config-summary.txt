@@ -1,0 +1,129 @@
+Build type: win32-msvc (x86_64, CPU features: sse sse2)
+Compiler: msvc 192930151
+Configuration: sse2 aesni sse3 ssse3 sse4_1 sse4_2 avx compile_examples f16c largefile msvc_mp rdrnd shani x86SimdAlways release c++11 c++14 c++1z concurrent no-pkg-config static stl
+Build options:
+  Mode ................................... release
+  Optimize release build for size ........ no
+  Building shared libraries .............. no
+  Using C standard ....................... C89
+  Using C++ standard ..................... C++17
+  Using precompiled headers .............. no
+  Using LTCG ............................. no
+  Target compiler supports:
+    SSE .................................. SSE2 SSE3 SSSE3 SSE4.1 SSE4.2
+    AVX .................................. AVX
+    AVX512 ............................... <none>
+    Other x86 ............................ AES F16C RDRAND SHA
+  Build parts ............................ libs
+  App store compliance ................... no
+Qt modules and options:
+  Qt Concurrent .......................... yes
+  Qt D-Bus ............................... no
+  Qt D-Bus directly linked to libdbus .... no
+  Qt Gui ................................. yes
+  Qt Network ............................. yes
+  Qt Sql ................................. yes
+  Qt Testlib ............................. yes
+  Qt Widgets ............................. yes
+  Qt Xml ................................. yes
+Support enabled for:
+  Using pkg-config ....................... no
+  udev ................................... no
+  Using system zlib ...................... no
+  Zstandard support ...................... no
+Qt Core:
+  DoubleConversion ....................... yes
+    Using system DoubleConversion ........ no
+  GLib ................................... no
+  iconv .................................. no
+  ICU .................................... no
+  Built-in copy of the MIME database ..... yes
+  Tracing backend ........................ <none>
+  Logging backends:
+    journald ............................. no
+    syslog ............................... no
+    slog2 ................................ no
+  Using system PCRE2 ..................... no
+Qt Network:
+  getifaddrs() ........................... no
+  IPv6 ifname ............................ no
+  libproxy ............................... no
+  Schannel ............................... no
+  OpenSSL ................................ no
+    Qt directly linked to OpenSSL ........ no
+  OpenSSL 1.1 ............................ no
+  DTLS ................................... no
+  OCSP-stapling .......................... no
+  SCTP ................................... no
+  Use system proxies ..................... yes
+Qt Gui:
+  Accessibility .......................... yes
+  FreeType ............................... yes
+    Using system FreeType ................ no
+  HarfBuzz ............................... no
+    Using system HarfBuzz ................ no
+  Fontconfig ............................. no
+  Image formats:
+    GIF .................................. no
+    ICO .................................. no
+    JPEG ................................. no
+      Using system libjpeg ............... no
+    PNG .................................. yes
+      Using system libpng ................ no
+  EGL .................................... no
+  OpenVG ................................. no
+  OpenGL:
+    ANGLE ................................ no
+    Desktop OpenGL ....................... no
+    Dynamic OpenGL ....................... no
+    OpenGL ES 2.0 ........................ no
+    OpenGL ES 3.0 ........................ no
+    OpenGL ES 3.1 ........................ no
+    OpenGL ES 3.2 ........................ no
+  Vulkan ................................. no
+  Session Management ..................... yes
+Features used by QPA backends:
+  evdev .................................. no
+  libinput ............................... no
+  INTEGRITY HID .......................... no
+  mtdev .................................. no
+  tslib .................................. no
+  xkbcommon .............................. no
+  X11 specific:
+    XLib ................................. no
+    XCB Xlib ............................. no
+    EGL on X11 ........................... no
+QPA backends:
+  DirectFB ............................... no
+  EGLFS .................................. no
+  LinuxFB ................................ no
+  VNC .................................... no
+  Mir client ............................. no
+  Windows:
+    Direct 2D ............................ yes
+    DirectWrite .......................... yes
+    DirectWrite 2 ........................ yes
+Qt Sql:
+  SQL item models ........................ yes
+Qt Widgets:
+  GTK+ ................................... no
+  Styles ................................. Fusion Windows WindowsVista
+Qt PrintSupport:
+  CUPS ................................... no
+Qt Sql Drivers:
+  DB2 (IBM) .............................. no
+  InterBase .............................. no
+  MySql .................................. no
+  OCI (Oracle) ........................... no
+  ODBC ................................... yes
+  PostgreSQL ............................. no
+  SQLite2 ................................ no
+  SQLite ................................. yes
+    Using system provided SQLite ......... no
+  TDS (Sybase) ........................... no
+Qt Testlib:
+  Tester for item models ................. yes
+
+Note: Using static linking will disable the use of dynamically
+loaded plugins. Make sure to import all needed static plugins,
+or compile needed modules into the library.

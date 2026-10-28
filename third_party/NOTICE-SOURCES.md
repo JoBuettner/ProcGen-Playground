@@ -22,5 +22,27 @@ upstream game or font data was edited. Retrieved 2026-10-25.
 | `tcl/license.terms` | https://github.com/tcltk/tcl/blob/core-8-6-12/license.terms |
 | `tk/license.terms` | https://github.com/tcltk/tk/blob/core-8-6-12/license.terms |
 
-These notices do not replace the pending Qt corresponding-source/relinking
-materials or establish Microsoft redistribution rights. See the bundled audit.
+Additional completion records, 2026-10-26 through 2026-10-28:
+
+- Qt's complete qtbase attribution/notice superset is under `qt/source-notices/`,
+  with its generated index in `qt/attribution-index.json` and readable
+  `qt/ATTRIBUTIONS.md`. These are collected from the pinned official source
+  archive in `source-archives.json`, not inferred from pip metadata.
+- `numerical-supplemental/NOTICE-PROVENANCE.json` records the exact MinGW-w64,
+  pthread, GCC and runtime-exception notice sources.
+- `microsoft/README.md` and `docs/licensing/MICROSOFT-RUNTIME.md` record the
+  controlled official runtime-package source, installed Visual Studio
+  entitlement, signed DLL hashes and original terms.
+- `assets/provenance.json` records the complete CC0/CC BY/OGA-BY legal texts.
+- `cffi/native-notice-provenance.json` records libffi copyright/license headers
+  omitted from the CFFI wheel's notice set.
+- `python/OpenSSL-1.1.1l-LICENSE` is from
+  https://github.com/openssl/openssl/blob/OpenSSL_1_1_1l/LICENSE (SHA-256
+  `c32913b33252e71190af2066f08115c69bc9fddadf3bf29296e20c835389841c`).
+- The FreeType acknowledgement covers Qt's rasterizer (2000-2016) and Pillow's
+  FreeType 2.14.3 (2026); the latter version and year are in
+  https://github.com/freetype/freetype/blob/VER-2-14-3/README.
+
+Source delivery uses the matching actual corresponding-source companion ZIP.
+See `SOURCE-COMPANION.md` in the bundled licenses and the project's current
+redistribution record; a notice collection alone is not source delivery.

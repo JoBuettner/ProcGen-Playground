@@ -53,6 +53,12 @@ def main() -> None:
                    "qt/LICENSE.LGPL3", "qt/LICENSE.GPL3", "numpy/LGPL-2.1.txt"):
         assert (app / "_internal" / "licenses" / "third_party" / notice).is_file(), notice
     assert not list(app.rglob("*ffmpeg*.exe")), "unused FFmpeg must not be distributed"
+    runtime = json.loads((ROOT / ".artifacts/licensed-runtime/manifest.json").read_text(encoding="utf-8"))
+    for row in runtime["vc14"]["files"]:
+        assert hashlib.sha256((app / "_internal" / row["name"]).read_bytes()).hexdigest() == row["sha256"]
+    for binary in app.rglob("*.dll"):
+        name = binary.name.lower()
+        assert name not in ("msvcr110.dll", "msvcr100.dll", "ucrtbase.dll") and not name.startswith("api-ms-win-")
     environment = {key: value for key, value in os.environ.items()
                    if not key.upper().startswith(("PYTHON", "VIRTUAL_ENV", "CONDA", "PYGLFW", "GLCONTEXT"))}
     environment["PATH"] = str(Path(os.environ["SystemRoot"]) / "System32")
@@ -79,6 +85,8 @@ def main() -> None:
             raise RuntimeError(f"Frozen check failed ({code}): {command}")
         report = json.loads(report_path.read_text(encoding="utf-8"))
         assert report["frozen"] is True and report["gui_verified"] is False
+        assert report["viewer_library"]["sha256"] == runtime["glfw"]["sha256"]
+        assert report["viewer_library"]["version"] == runtime["glfw"]["version_string"]
         assert report["sha256"] == case["sha256"], f"Output differs from upstream: {case}"
         results.append(report)
         print(f"PASS frozen {case['game']} {case['mode']} {case['vision']} simple={case['simplified']}", flush=True)

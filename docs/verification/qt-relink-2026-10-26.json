@@ -1,0 +1,163 @@
+{
+  "marker": "5.13.2-license-relink-check",
+  "qversion_only_modification": true,
+  "modified_engine_sha256": "b36456f419d8944a3f60c8df0fc2eb158cfa43c6f027a8b66ece3083c37b389b",
+  "unmodified_rebuild_sha256": "6e7c319b10069d65e6016cda501342dd0833a7926c457f3b115cce7ded7d3c85",
+  "release_engine_unchanged": true,
+  "replacement_path": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen\\data\\prebuilt\\env.dll",
+  "gui_verified": false,
+  "separate_pc_verified": false,
+  "source_file": "qtbase/src/corelib/global/qglobal.cpp",
+  "before": "return QT_VERSION_STR;",
+  "after": "return \"5.13.2-license-relink-check\";",
+  "commands": [
+    {
+      "command": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\nmake.exe"
+      ],
+      "cwd": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\qt-build\\src\\corelib"
+    },
+    {
+      "command": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+        "--build",
+        "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check\\engine-build",
+        "--config",
+        "RelWithDebInfo",
+        "--target",
+        "env",
+        "--parallel",
+        "4"
+      ],
+      "cwd": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\relink-check"
+    }
+  ],
+  "results": [
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "caveflyer",
+      "difficulty": "hard",
+      "vision": "agent",
+      "level_seed": 42,
+      "sha256": "9a1e5c94780d4866e3f045fe0aaa00bf6e07073e03ece07016c531e455897c36",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "caveflyer",
+      "difficulty": "hard",
+      "vision": "human",
+      "level_seed": 42,
+      "sha256": "d71968da2d176bbfd5b082e0579a58d0bbbcdea0205cc8ce2148be8f1e334685",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "caveflyer",
+      "difficulty": "hard",
+      "vision": "human",
+      "level_seed": 42,
+      "sha256": "44fc5b1d551eae1c30f132ddd3ea368b3b343cd1f288c33c51231a4155558f26",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "coinrun",
+      "difficulty": "hard",
+      "vision": "agent",
+      "level_seed": 42,
+      "sha256": "a613c2c40417680b95a8cbb1eed743636ea55a5c3ad33bf8ce2a0671c13903ee",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "coinrun",
+      "difficulty": "hard",
+      "vision": "human",
+      "level_seed": 42,
+      "sha256": "7a0b41999f1ec3d9b854021590e104bfa91aae6be09bb39400a3d779e73f6f89",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "coinrun",
+      "difficulty": "hard",
+      "vision": "human",
+      "level_seed": 42,
+      "sha256": "5c2de5f43ce0c664029bfdf0de741d60d6ce21773c03c71b701d78c8b04706ec",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "heist",
+      "difficulty": "hard",
+      "vision": "agent",
+      "level_seed": 42,
+      "sha256": "f2268e4f395fe16d14402060fd39fe0b2e09f32bdddd96a5c3d977a58c120fbf",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "heist",
+      "difficulty": "hard",
+      "vision": "human",
+      "level_seed": 42,
+      "sha256": "00d3c3dcea09f14e0a9ef372d2ed66e0ee2145c01c1d86df4b8e085c01de5092",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    },
+    {
+      "status": "passed",
+      "gui_verified": false,
+      "game": "heist",
+      "difficulty": "hard",
+      "vision": "human",
+      "level_seed": 42,
+      "sha256": "18cb7e895f79728f9b10aaa228382f11e50cb294400a19eed7c1080187a2417e",
+      "procgen": "0.10.7",
+      "python": "3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "frozen": true,
+      "resources": "D:\\Repositories\\Research\\ProcGen-Playground\\.artifacts\\Qt Relink Pruefung zkykdw2r\\ProcGenPlayground\\_internal\\procgen"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "filename": "libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+  "sha256": "57b87772bf676b5c2d718c79dddc9f039d79ec3319fee1398cc305adff7b69e5",
+  "bytes": 38168576,
+  "pe_timestamp_utc": "2023-09-28T13:43:57+00:00",
+  "quadmath_symbols": [
+    {
+      "name": "__quadmath_do_pad",
+      "section": 1,
+      "value": 32291296,
+      "storage": 2
+    },
+    {
+      "name": "quadmath_snprintf",
+      "section": 1,
+      "value": 32292112,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_printf_fphex",
+      "section": 1,
+      "value": 32293120,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_printf_fp",
+      "section": 1,
+      "value": 32298976,
+      "storage": 2
+    },
+    {
+      "name": ".rdata$.refptr.__quadmath_fpioconst_pow10",
+      "section": 3,
+      "value": 364400,
+      "storage": 3
+    },
+    {
+      "name": ".rdata$.refptr.__quadmath_tens",
+      "section": 3,
+      "value": 364416,
+      "storage": 3
+    },
+    {
+      "name": "__quadmath_mpn_rshift",
+      "section": 1,
+      "value": 32308192,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_cmp",
+      "section": 1,
+      "value": 32308480,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_divrem",
+      "section": 1,
+      "value": 32308544,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_extract_flt128",
+      "section": 1,
+      "value": 32310400,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_lshift",
+      "section": 1,
+      "value": 32311136,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_mul_1",
+      "section": 1,
+      "value": 32311264,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_mul",
+      "section": 1,
+      "value": 32311424,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_submul_1",
+      "section": 1,
+      "value": 32312320,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_sub_n",
+      "section": 1,
+      "value": 32312496,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_addmul_1",
+      "section": 1,
+      "value": 32312560,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_add_n",
+      "section": 1,
+      "value": 32312720,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_impn_mul_n_basecase",
+      "section": 1,
+      "value": 32312784,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_mpn_impn_mul_n",
+      "section": 1,
+      "value": 32313040,
+      "storage": 2
+    },
+    {
+      "name": ".refptr.__quadmath_fpioconst_pow10",
+      "section": 3,
+      "value": 364400,
+      "storage": 2
+    },
+    {
+      "name": ".refptr.__quadmath_tens",
+      "section": 3,
+      "value": 364416,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_tens",
+      "section": 3,
+      "value": 349056,
+      "storage": 2
+    },
+    {
+      "name": "__quadmath_fpioconst_pow10",
+      "section": 3,
+      "value": 348672,
+      "storage": 2
+    }
+  ]
+}

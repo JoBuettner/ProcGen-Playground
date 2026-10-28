@@ -75,7 +75,12 @@ def main() -> None:
                     destination / "procgen" / "LICENSE")
     for required in ("procgen/ASSET_LICENSES.md", "gym3/LICENSE", "gym3/LICENSES.md",
                      "glfw/GLFW-3.3.2-LICENSE.md", "qt/LICENSE.LGPL3", "qt/LICENSE.GPL3",
-                     "numpy/LGPL-2.1.txt"):
+                     "numpy/LGPL-2.1.txt", "qt/attribution-index.json", "qt/ATTRIBUTIONS.md",
+                     "cffi/libffi-x86-x64-NOTICES.md", "python/OpenSSL-1.1.1l-LICENSE",
+                     "numerical-supplemental/MinGW-w64-runtime.txt", "numerical-supplemental/winpthreads-COPYING.txt",
+                     "numerical-supplemental/OpenBLAS-x64-source-notices.txt", "numerical-supplemental/LAPACK-LICENSE.txt",
+                     "microsoft/DOWNSTREAM-TERMS.md", "microsoft/VS-Community-2022-EULA.txt",
+                     "assets/CC0-1.0.txt", "assets/CC-BY-3.0.txt", "assets/CC-BY-4.0.txt", "assets/OGA-BY-3.0.txt"):
         if not (destination / required).is_file():
             raise FileNotFoundError(f"Required upstream notice is missing: {required}")
     print(f"Collected notices for {len(inventory)} distributions plus Python/Tcl/Tk")

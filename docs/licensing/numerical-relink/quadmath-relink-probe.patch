@@ -1,0 +1,15 @@
+--- a/libquadmath/printf/quadmath-printf.c
++++ b/libquadmath/printf/quadmath-printf.c
+@@ -420,3 +420,12 @@
+   register_printf_specifier ('A', NULL, NULL);
+ }
+ #endif
++
++/* ProcGen Playground relinking demonstration, modified 2026-10-26.
++   Harmless additional query; the original numerical functions are unchanged.
++   This addition is distributed under LGPL-2.1-or-later. */
++const char *
++procgen_quadmath_relink_probe (void)
++{
++  return "ProcGen libquadmath source modification 2026-10-26";
++}
