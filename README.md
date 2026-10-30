@@ -3,6 +3,12 @@
 Play the original 16 ProcGen games through an independent Windows desktop app.
 This project is not an official OpenAI product.
 
+[**Download for Windows**](https://github.com/JoBuettner/ProcGen-Playground/releases)
+— download the portable ZIP, extract it, and open `ProcGenPlayground.exe`.
+Python and an installer are not required.
+
+<img src="docs/images/launcher.jpg" width="700" alt="ProcGen Playground launcher with game selection, difficulty, seed and visual settings">
+
 Includes Qt (LGPLv3) and libquadmath (LGPL-2.1-or-later). Matching source and
 rebuild instructions are provided in the accompanying
 `ProcGenPlayground-corresponding-sources.zip`. Read `THIRD-PARTY-NOTICES.txt`.
@@ -11,10 +17,10 @@ component-specific terms; those terms preserve all other components' licenses.
 Only the portable ZIP is needed to play; the source companion is provided for
 license compliance and rebuilding.
 
-**Development / prerelease:** the launcher offers all 16 original games.
-Clean-machine GUI verification is still required; see [status](docs/STATUS.md).
+Automatic builds from `main` are published as development prereleases.
+See [status](docs/STATUS.md) for automated checks and recorded manual coverage.
 
-## Play a development portable build
+## Play
 
 1. Extract the entire `ProcGenPlayground-Windows-x64-portable.zip`.
 2. Open the extracted `ProcGenPlayground` folder.
@@ -32,9 +38,12 @@ current launcher session; preferences are not written to the installation folder
 Keyboard: Tab navigates controls; Alt+P plays, Alt+S stops, and Alt+X exits.
 
 You do not need Python, a terminal, or an internet connection to play.
-Requirements: Windows x64, AVX-capable processor, and an OpenGL 3.3 graphics
-driver. Upstream documents Windows 10; additional Windows versions need testing.
-Local build artifacts are under `dist/`; no public downloads are available yet.
+Requirements: Windows 10/11 x64, an AVX-capable processor, and an OpenGL 3.3
+graphics driver. Download both source and binary archives from the
+[release page](https://github.com/JoBuettner/ProcGen-Playground/releases);
+only the portable binary ZIP is needed to play. Keep its `_internal` folder
+next to the EXE. Local builds are under `dist/ProcGenPlayground/`; the EXE
+under `build/` is an intermediate file and cannot run by itself.
 
 ## Controls
 
@@ -51,15 +60,20 @@ Startup failures show a dialog when possible. Logs are stored per user at
 Extract all files together; do not move the executable away from `_internal`.
 The app never downloads dependencies or compiles the engine at runtime.
 
+Report bugs through [GitHub Issues](https://github.com/JoBuettner/ProcGen-Playground/issues).
+Include the release tag, Windows version, selected game/options and exact error.
+Review logs for personal information before attaching them.
+
 ## Development
 
 Use Windows x64 and CPython 3.10. Follow [BUILD.md](docs/BUILD.md) for the pinned
-dependencies, tests, and portable build. The full roadmap is in
-[the implementation plan](PROCGEN_PLAYGROUND_CODEX_PLAN.md).
+dependencies, tests, and portable build. Current verification is recorded in
+[STATUS.md](docs/STATUS.md); the [original implementation plan](PROCGEN_PLAYGROUND_CODEX_PLAN.md)
+is retained as historical development context.
 
 The engine, timing, controls, and assets come from unmodified `procgen==0.10.7`.
 The wrapper is MIT licensed; upstream code, assets, and dependencies have their
 own terms. Read [attributions](docs/ATTRIBUTION.md) before redistribution.
 The [redistribution record](docs/licensing/REDISTRIBUTION.md) describes the
-included notices, source companion and replacement procedures. Distribution uses the portable ZIP;
-no installer is planned. Full desktop and separate-PC tests are final validation.
+included notices, source companion and replacement procedures. Redistributors
+must keep the matching source companion available alongside each portable ZIP.

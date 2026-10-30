@@ -80,7 +80,7 @@ jobs:
       - name: Upload portable development artifact
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
-          name: ProcGenPlayground-Windows-x64-prerelease-GUI-testing-incomplete
+          name: ProcGenPlayground-Windows-x64-build
           path: |
             dist/ProcGenPlayground-Windows-x64-portable.zip
             dist/ProcGenPlayground-Windows-x64-portable.zip.sha256
@@ -111,7 +111,7 @@ jobs:
       - name: Download verified build
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
-          name: ProcGenPlayground-Windows-x64-prerelease-GUI-testing-incomplete
+          name: ProcGenPlayground-Windows-x64-build
           path: .
       - name: Publish verified prerelease
         env:

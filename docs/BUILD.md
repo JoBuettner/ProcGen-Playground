@@ -89,7 +89,7 @@ GitHub Actions runs both jobs on GitHub-hosted `windows-2022` machines.
 Pushes and pull requests run the source checks. Every push to `main` also builds
 the portable ZIP/source companion and publishes a development prerelease after
 verification passes. Its unique tag contains the app version and commit SHA,
-for example `v0.2.0-dev.0-g0123456789ab`. Both ZIPs and checksum files are release
+for example `v0.2.0-g0123456789ab`. Both ZIPs and checksum files are release
 assets; launch instructions and the third-party notice are added automatically.
 Published releases are not overwritten on reruns. Publishing is a separate job
 that downloads the verified build artifact. After a publishing failure, use
@@ -101,9 +101,9 @@ publication are separate, so partial drafts can be resumed safely.
 manual runs. Other branches and pull requests cannot run the release job.
 No self-hosted runner or extra secrets are needed; only the release job gets
 `contents: write` permission through the automatic GitHub token.
-Build diagnostics are uploaded even when packaging fails. The user confirmed
-hosted packaging succeeded; the new automatic publication step still needs its
-first GitHub run after pushing this change.
+Build diagnostics are uploaded even when packaging fails. Hosted packaging and
+automatic prerelease publication have both completed successfully, as confirmed
+by the maintainer. Each new release's workflow records its own verification.
 
 Native verification strips Python, virtual-environment, GLFW, and GLContext
 environment overrides; PATH contains only Windows System32. It checks that

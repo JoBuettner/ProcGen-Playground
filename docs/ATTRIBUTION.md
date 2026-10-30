@@ -78,7 +78,7 @@ under the installed Visual Studio Community open-source development route.
 Microsoft-only terms are in `third_party/microsoft/DOWNSTREAM-TERMS.md` and are
 prominently communicated in the portable README and THIRD-PARTY-NOTICES.txt.
 
-No public release has been published. Final desktop/separate-PC acceptance and
-publication of the binary/source pair remain release steps. Current technical
+Releases include the matching binary/source pair and its checksums. Recorded
+desktop/separate-PC coverage is tracked separately in `docs/STATUS.md`. Current technical
 redistribution preparation: `REDISTRIBUTION.md`. Supplemental notice provenance:
 `third_party/NOTICE-SOURCES.md`.

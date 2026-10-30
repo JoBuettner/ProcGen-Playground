@@ -3,7 +3,7 @@
 Updated 2026-10-28. This records the materials prepared for the portable Windows
 build. It supersedes the open technical items in the historical 2026-10-25
 license audit. The launcher remains MIT licensed; dependencies retain their own
-terms. No public release has been published.
+terms. Release downloads are provided together as a matching binary/source pair.
 
 ## Included materials
 
@@ -53,9 +53,9 @@ themselves establish that a future download page satisfies these conditions.
 
 The final desktop walkthrough, separate PC without Python, actual
 SmartScreen/antivirus observations, and publication remain release steps.
-Those checks remain separately recorded. GitHub source checks have passed;
+Those checks remain separately recorded. GitHub source checks and packaging have passed;
 the updated packaging job uses GitHub-hosted Windows with the documented
-compiler tools, and its first complete run remains to verify.
+compiler tools. Automatic prerelease publication has also been confirmed by the user.
 
 This is an engineering record of the actual sources, notices and replacement
 procedures supplied, not a claim of legal clearance for every jurisdiction or

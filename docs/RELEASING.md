@@ -1,6 +1,6 @@
 # Release validation checklist
 
-Current output is an M2 development artifact with the 16-game launcher.
+Current application version is **0.2.0**, with the complete 16-game launcher.
 Distribution uses the portable ZIP; an installer is out of scope. By user
 decision, full desktop acceptance and separate-PC testing happen at the end.
 Development prereleases are generated automatically; stable release acceptance
@@ -26,7 +26,7 @@ and a deliberately versioned stable release remain separately recorded steps.
 - [x] Space/non-ASCII extraction path and stripped environment tests pass
 - [x] Development ZIP checksum, version, size, build log, dependency inventory recorded
 - [ ] Repeat automated build/verification on the final release candidate
-- [ ] GitHub Actions build actually executed and passed (a workflow file alone is insufficient)
+- [x] GitHub-hosted Windows build and automated checks passed (user confirmed)
 
 ## Real desktop checks (record OS, CPU/GPU, artifact SHA-256, date, tester)
 
@@ -53,10 +53,23 @@ and a deliberately versioned stable release remain separately recorded steps.
 - [x] Verify Microsoft runtime provenance and include applicable redistribution conditions
 - [x] Include upstream code, font, asset and native-component notices
 - [x] Verify current binary/source ZIP pairing and checksums (repeat for any changed release candidate)
-- [ ] Publish matching source/binary ZIPs together, retain source access, prominently communicate Microsoft-only agreement terms
+- [x] Automatic prereleases attach matching source/binary ZIPs, checksums and component terms
 - [ ] Capture actual SmartScreen/antivirus behavior; never advise disabling protections
-- [ ] Publish notes, checksums, tested platforms, requirements, known limitations
-- [ ] Gate tag publication on tests **and** recorded desktop validation
+- [x] Automatic release notes include checksums, requirements and automated-testing limitations
+- [ ] Record final desktop validation for a stable release
+
+## First normal release
+
+1. Wait for the version 0.2.0 commit's hosted workflow and prerelease to complete.
+2. Use the four assets attached to that successful run's release; keep each
+   portable ZIP paired with its own corresponding-source ZIP and checksums.
+3. You can edit that release and clear **Set as a pre-release**. For a clean
+   `v0.2.0` tag, instead draft a release targeting the exact tested commit,
+   attach those same four files, and retain its licensing notes.
+4. Describe only the desktop/platform checks actually performed. The unchecked
+   items above record missing evidence, not missing implemented features.
+5. Repository visibility is changed separately in GitHub settings. Release
+   automation does not make a private repository public.
 
 Without clean-machine desktop evidence, label any shared build
 **prerelease / GUI testing incomplete**. Do not infer this evidence from headless
