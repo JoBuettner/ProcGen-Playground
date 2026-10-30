@@ -86,13 +86,19 @@ To recreate the faster object shortcut, follow
 No source or toolchain is downloaded or compiled during gameplay.
 
 GitHub Actions runs both jobs on GitHub-hosted `windows-2022` machines.
-Pushes and pull requests run the source checks. To build the portable ZIP and
-source companion, select **Actions → Windows portable development build →
-Run workflow → main**. The packaging job waits for the checks, then uploads
-both ZIPs, checksums and verification reports as a workflow artifact. It does
-not publish a GitHub Release. No self-hosted runner or extra secrets are needed.
-Build diagnostics are uploaded even when packaging fails. The first hosted
-packaging run still needs to be verified after pushing this workflow change.
+Pushes and pull requests run the source checks. Every push to `main` also builds
+the portable ZIP/source companion and publishes a development prerelease after
+verification passes. Its unique tag contains the app version and commit SHA,
+for example `v0.2.0-dev.0-g0123456789ab`. Both ZIPs and checksum files are release
+assets; launch instructions and the third-party notice are added automatically.
+Published releases are not overwritten on reruns. Failed draft uploads can be
+completed by rerunning the same commit. **Run workflow → main** also supports
+manual runs. Other branches and pull requests cannot run the release job.
+No self-hosted runner or extra secrets are needed; only the release job gets
+`contents: write` permission through the automatic GitHub token.
+Build diagnostics are uploaded even when packaging fails. The user confirmed
+hosted packaging succeeded; the new automatic publication step still needs its
+first GitHub run after pushing this change.
 
 Native verification strips Python, virtual-environment, GLFW, and GLContext
 environment overrides; PATH contains only Windows System32. It checks that

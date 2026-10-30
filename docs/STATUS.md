@@ -119,8 +119,9 @@ Portable ZIP SHA-256: `07aab507a22141335beee0307c438d1ee037e577294227705e9974b38
   alongside each binary release. See `licensing/REDISTRIBUTION.md`; the initial
   `LICENSE-AUDIT.md` is historical.
 - GitHub remote is configured and `main` tracks `origin/main`. The user confirmed
-  hosted source checks passed. Packaging now targets GitHub-hosted Windows;
-  its first complete run after this configuration change remains to verify.
+  hosted checks and packaging passed. Pushes to `main` now also publish a
+  development prerelease with matching binary/source ZIPs and checksums after
+  verification succeeds. The first automatic publication remains to observe.
 - The M2 interface/process implementation is complete and packaged. Remaining
   work is final acceptance and publication of the paired binary/source materials.
   There is no known missing required UI feature. Unchecked UI scenarios are

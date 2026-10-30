@@ -3,7 +3,18 @@
 Current output is an M2 development artifact with the 16-game launcher.
 Distribution uses the portable ZIP; an installer is out of scope. By user
 decision, full desktop acceptance and separate-PC testing happen at the end.
-No public release/tag has been published.
+Development prereleases are generated automatically; stable release acceptance
+is tracked separately below.
+
+## Automatic development releases
+
+Pushing to `main` now runs checks, builds and verifies both ZIPs on GitHub-hosted
+Windows, then publishes a prerelease with the four ZIP/checksum assets. Tags use
+the app version plus commit SHA. Release notes include launch instructions and
+the complete third-party notice. Reruns preserve published releases; incomplete
+draft uploads can be retried. Manual **Run workflow → main** is also supported.
+These automatic prereleases report automated validation only. Desktop testing
+and a deliberately versioned stable release remain separately recorded steps.
 
 ## Automated evidence
 
