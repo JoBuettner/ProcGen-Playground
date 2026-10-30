@@ -1,8 +1,9 @@
 $ErrorActionPreference = 'Stop'
 $PSNativeCommandUseErrorActionPreference = $false
 
-$version = & .\.venv\Scripts\python.exe -c "import tomli; print(tomli.load(open('pyproject.toml', 'rb'))['project']['version'])"
-if ($LASTEXITCODE -ne 0) { throw 'Could not read application version' }
+$project = [regex]::Match((Get-Content -Raw pyproject.toml), '(?ms)^\[project\]\s*\n(.*?)(?=^\[|\z)').Groups[1].Value
+$version = [regex]::Match($project, '(?m)^version\s*=\s*"([^"]+)"').Groups[1].Value
+if (-not $version) { throw 'Could not read application version' }
 if ($env:GITHUB_SHA -notmatch '^[0-9a-f]{40}$') { throw 'A full workflow commit SHA is required' }
 if (-not $env:GH_REPO) { throw 'GH_REPO is required' }
 $tag = 'v' + $version.Trim().Replace('.dev', '-dev.') + '-g' + $env:GITHUB_SHA.Substring(0, 12)
@@ -18,17 +19,29 @@ foreach ($asset in $assets) {
 
 # A completed release is immutable from this workflow's perspective. A failed
 # upload may leave a draft, which can be completed by rerunning the same commit.
-$existingJson = & gh release view $tag --json isDraft,url,targetCommitish 2>$null
-$exists = $LASTEXITCODE -eq 0
-if ($exists) {
-    $existing = $existingJson | ConvertFrom-Json
-    if (-not $existing.isDraft) {
-        Write-Output "Release already published; leaving its assets unchanged: $($existing.url)"
-        exit 0
+function Get-ExistingRelease {
+    $response = & gh release view $tag --json isDraft,url,targetCommitish 2>&1
+    if ($LASTEXITCODE -eq 0) { return ($response -join "`n" | ConvertFrom-Json) }
+    $message = $response -join "`n"
+    if ($message -match 'release not found|HTTP 404') { return $null }
+    throw "Could not check existing release: $message"
+}
+
+function Test-ReusableDraft($release) {
+    if ($null -eq $release) { return $false }
+    if (-not $release.isDraft) {
+        Write-Host "Release already published; leaving its assets unchanged: $($release.url)"
+        return $false
     }
-    if ($existing.targetCommitish -ne $env:GITHUB_SHA) {
+    if ($release.targetCommitish -ne $env:GITHUB_SHA) {
         throw 'Existing draft targets another commit; refusing to change it'
     }
+    return $true
+}
+
+$existing = Get-ExistingRelease
+if ($null -ne $existing -and -not (Test-ReusableDraft $existing)) {
+    return
 }
 
 $notesPath = '.artifacts/release-notes.md'
@@ -51,14 +64,30 @@ $($env:GITHUB_SERVER_URL)/$($env:GH_REPO)/blob/$($env:GITHUB_SHA)/third_party/mi
 $notes += [Environment]::NewLine + (Get-Content -Raw -LiteralPath 'docs/licensing/THIRD-PARTY-NOTICES.txt')
 $notes | Set-Content -LiteralPath $notesPath -Encoding utf8
 
-if ($exists) {
-    & gh release upload $tag @assets --clobber
-    if ($LASTEXITCODE -ne 0) { throw 'Draft release upload failed' }
-} else {
-    & gh release create $tag @assets --draft --prerelease --latest=false `
-        --target $env:GITHUB_SHA --title "ProcGen Playground $tag" --notes-file $notesPath
-    if ($LASTEXITCODE -ne 0) { throw 'Draft release creation/upload failed' }
+if ($null -eq $existing) {
+    for ($attempt = 1; $attempt -le 3; $attempt++) {
+        # Create only the draft here. Asset uploads and publication are separate,
+        # recoverable operations. A prerelease does not need a make_latest field.
+        $response = & gh release create $tag --draft --prerelease `
+            --target $env:GITHUB_SHA --title "ProcGen Playground $tag" --notes-file $notesPath 2>&1
+        if ($LASTEXITCODE -eq 0) { break }
+        $message = $response -join "`n"
+        Write-Host "Draft creation attempt $attempt failed: $message"
+        # A 500 can occur after the server has committed the draft. Reconcile
+        # before another POST, rather than creating duplicate releases.
+        $existing = Get-ExistingRelease
+        if ($null -ne $existing) {
+            if (-not (Test-ReusableDraft $existing)) { return }
+            break
+        }
+        if ($message -notmatch 'HTTP (500|502|503|504)\b' -or $attempt -eq 3) {
+            throw "Draft release creation failed after $attempt attempt(s): $message"
+        }
+        Start-Sleep -Seconds (2 * $attempt)
+    }
 }
-& gh release edit $tag --draft=false --prerelease --latest=false --notes-file $notesPath
+& gh release upload $tag @assets --clobber
+if ($LASTEXITCODE -ne 0) { throw 'Draft release upload failed; rerun the release job to resume' }
+& gh release edit $tag --draft=false --prerelease --notes-file $notesPath
 if ($LASTEXITCODE -ne 0) { throw 'Release publication failed' }
 Write-Output "Published $tag"

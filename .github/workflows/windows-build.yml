@@ -41,10 +41,8 @@ jobs:
     needs: checks
     runs-on: windows-2022
     timeout-minutes: 45
-    permissions:
-      contents: write
     concurrency:
-      group: portable-release-${{ github.sha }}
+      group: portable-build-${{ github.sha }}
       cancel-in-progress: false
     defaults:
       run:
@@ -94,6 +92,27 @@ jobs:
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 14
+  release:
+    needs: portable
+    runs-on: windows-2022
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    concurrency:
+      group: publish-release-${{ github.sha }}
+      cancel-in-progress: false
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Download verified build
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: ProcGenPlayground-Windows-x64-prerelease-GUI-testing-incomplete
+          path: .
       - name: Publish verified prerelease
         env:
           GH_TOKEN: ${{ github.token }}

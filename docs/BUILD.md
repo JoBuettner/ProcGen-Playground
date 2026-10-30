@@ -91,8 +91,13 @@ the portable ZIP/source companion and publishes a development prerelease after
 verification passes. Its unique tag contains the app version and commit SHA,
 for example `v0.2.0-dev.0-g0123456789ab`. Both ZIPs and checksum files are release
 assets; launch instructions and the third-party notice are added automatically.
-Published releases are not overwritten on reruns. Failed draft uploads can be
-completed by rerunning the same commit. **Run workflow → main** also supports
+Published releases are not overwritten on reruns. Publishing is a separate job
+that downloads the verified build artifact. After a publishing failure, use
+**Re-run failed jobs** to retry just that job without rebuilding the app.
+Draft creation retries HTTP 500/502/503/504 up to three times with a release
+lookup between attempts; other errors fail immediately. Draft upload and
+publication are separate, so partial drafts can be resumed safely.
+**Run workflow → main** also supports
 manual runs. Other branches and pull requests cannot run the release job.
 No self-hosted runner or extra secrets are needed; only the release job gets
 `contents: write` permission through the automatic GitHub token.
