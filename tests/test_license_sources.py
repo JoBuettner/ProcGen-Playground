@@ -16,7 +16,7 @@ import prepare_license_sources
 import package_sources
 from rebuild_procgen_native import extract_archive, visual_studio_environment
 from verify_license_bundle import verify_source_package, verify_wheel_input
-from prepare_windows_runtime import require_runtime_toolset
+from prepare_windows_runtime import glfw_toolchain, require_runtime_toolset
 
 
 @pytest.mark.parametrize("name", ("../escape", "tree/../../escape", "/escape", "C:/escape"))
@@ -141,3 +141,27 @@ def test_native_provenance_rejects_changed_wheel_record(tmp_path: Path) -> None:
 def test_controlled_runtime_rejects_a_newer_dependent_toolset() -> None:
     with pytest.raises(RuntimeError, match=r"older than MSVC linker 14\.52"):
         require_runtime_toolset(Path("future_dependency.pyd"), (14, 52), "14.51.36247.0")
+
+
+@pytest.mark.parametrize("edition,generator", (("2022/Enterprise", "Visual Studio 17 2022"),
+                                             ("2019/BuildTools", "Visual Studio 16 2019")))
+def test_glfw_toolchain_supports_hosted_and_local_visual_studio(tmp_path: Path, edition: str,
+                                                              generator: str) -> None:
+    instance = tmp_path / edition
+    cmake = instance / "Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe"
+    cmake.parent.mkdir(parents=True)
+    cmake.touch()
+    tool, selection = glfw_toolchain([instance], generator)
+    assert tool == cmake
+    assert selection[selection.index("-G") + 1] == generator
+    assert selection[selection.index("-T") + 1] == "v142"
+    assert f"-DCMAKE_GENERATOR_INSTANCE={instance}" in selection
+
+
+def test_crt_preparation_does_not_require_community_on_build_worker(tmp_path: Path,
+                                                                  monkeypatch: pytest.MonkeyPatch) -> None:
+    import prepare_windows_runtime
+
+    monkeypatch.setattr(prepare_windows_runtime, "MICROSOFT_SOURCES", tmp_path / "runtime")
+    with pytest.raises(FileNotFoundError, match="Pinned Microsoft runtime package missing"):
+        prepare_windows_runtime.stage_crt([tmp_path / "2022/Enterprise"], download=False)

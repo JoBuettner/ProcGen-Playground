@@ -121,11 +121,14 @@ bundled rebuilt DLL before import. No installed wheel is patched.
 
 ## Reproduction and packaging contract
 
-Prerequisites: Windows10/11 x64, project Python environment/pefile, installed
-VS2022 Community for the documented license route, and VS2019 CMake/v142 tools
-plus SDK10.0.19041.0 for a fresh GLFW build. BuildTools may execute the compiler
-for this Community-developed app. Other machines/CI must supply those inputs;
-ambient PATH runtimes are never a fallback.
+Prerequisites: Windows x64, project Python environment/pefile, and Visual Studio
+2022 or 2019 with CMake/v142 tools plus SDK10.0.19041.0 for a fresh GLFW build.
+The project's Community-developed open-source redistribution route remains as
+documented above. It does not require a Community IDE on every build worker:
+GitHub-hosted `windows-2022` uses its preinstalled VS2022 Enterprise build tools.
+The helper records detected build installations separately from the project's
+redistribution terms. CRT downloads, hashes, signatures and dependency checks
+are identical on both platforms; ambient PATH runtimes are never a fallback.
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/prepare_windows_runtime.py --download --check-bundle dist/ProcGenPlayground

@@ -53,8 +53,9 @@ themselves establish that a future download page satisfies these conditions.
 
 The final desktop walkthrough, separate PC without Python, actual
 SmartScreen/antivirus observations, and publication remain release steps.
-Those checks are deferred by agreement with the user. GitHub CI has not run;
-the packaging job requires an explicitly configured VS2019 runner.
+Those checks remain separately recorded. GitHub source checks have passed;
+the updated packaging job uses GitHub-hosted Windows with the documented
+compiler tools, and its first complete run remains to verify.
 
 This is an engineering record of the actual sources, notices and replacement
 procedures supplied, not a claim of legal clearance for every jurisdiction or

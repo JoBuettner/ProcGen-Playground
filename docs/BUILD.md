@@ -41,9 +41,12 @@ claimed (build tools and timestamps can affect them).
 
 ## Verify and build
 
-Packaging also requires an installed Visual Studio 2022 Community entitlement for
-this MIT open-source application, the pinned official x64 VC14 runtime package,
-v142 C++ tools, Windows SDK **10.0.19041.0**, and the VS2019 CMake component.
+Packaging requires Visual Studio 2022 or 2019 with its CMake component,
+v142 C++ tools, Windows SDK **10.0.19041.0**, and the pinned official x64 VC14
+runtime package. GitHub's `windows-2022` image supplies VS2022 Enterprise and
+these build tools. Local builds fall back to VS2019 when VS2022 CMake is absent.
+The project's documented Microsoft redistribution terms remain applicable;
+the build worker does not need a separate Community IDE installation.
 The selected runtime must be at least as recent as the newest runtime-dependent
 MSVC toolset in the bundle. The exact runtime hashes, entitlement route and
 same-version GLFW build are documented in
@@ -82,10 +85,14 @@ To recreate the faster object shortcut, follow
 `licensing/numerical-relink/README.md`; compiler binaries are obtained separately.
 No source or toolchain is downloaded or compiled during gameplay.
 
-GitHub Actions runs source checks on hosted Windows runners. Portable packaging
-is manual-dispatch only on a trusted self-hosted runner labelled
-`procgen-vs2019` with the controlled prerequisites above. No remote/runner is
-configured in this workspace and no GitHub CI success is claimed.
+GitHub Actions runs both jobs on GitHub-hosted `windows-2022` machines.
+Pushes and pull requests run the source checks. To build the portable ZIP and
+source companion, select **Actions → Windows portable development build →
+Run workflow → main**. The packaging job waits for the checks, then uploads
+both ZIPs, checksums and verification reports as a workflow artifact. It does
+not publish a GitHub Release. No self-hosted runner or extra secrets are needed.
+Build diagnostics are uploaded even when packaging fails. The first hosted
+packaging run still needs to be verified after pushing this workflow change.
 
 Native verification strips Python, virtual-environment, GLFW, and GLContext
 environment overrides; PATH contains only Windows System32. It checks that

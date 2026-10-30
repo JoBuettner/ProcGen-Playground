@@ -189,9 +189,9 @@ def is_msvc14_runtime(name: str) -> bool:
 
 
 def stage_crt(instances: list[Path], download: bool) -> dict:
-    community = next((path for path in instances if path.name == "Community"), None)
-    if community is None:
-        raise FileNotFoundError("Installed VS2022 Community required for the documented redistribution route")
+    # The project's redistribution terms/entitlement do not depend on the IDE
+    # edition physically installed on each build worker. Hosted images use
+    # Enterprise; extract the same pinned official CRT on both build platforms.
     MICROSOFT_SOURCES.mkdir(parents=True, exist_ok=True)
     package = MICROSOFT_SOURCES / "VC_redist.x64.exe"
     if not package.is_file():
@@ -234,13 +234,23 @@ def stage_crt(instances: list[Path], download: bool) -> dict:
                 source_package=dict(url=CRT_URL, path=relative(package), sha256=CRT_PACKAGE_SHA256,
                                     signature=package_signature), extraction=extraction,
                 version=CRT_VERSION, files=rows, dependency_closure=sorted(selected),
-                licensed_installation=str(community),
+                build_installations=[str(path) for path in instances],
                 eligibility="MIT open-source project; Community2022 section1(b)(i); distribution section4",
                 redist_list="https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution",
                 license="third_party/microsoft/VS-Community-2022-EULA.docx")
 
 
-def build_glfw(instances: list[Path], download: bool, *, rebuild: bool = False) -> dict:
+def glfw_toolchain(instances: list[Path], generator: str) -> tuple[Path, list[str]]:
+    for instance in instances:
+        cmake = instance / "Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe"
+        if cmake.is_file():
+            return cmake, ["-G", generator, "-A", "x64", "-T", "v142",
+                           f"-DCMAKE_GENERATOR_INSTANCE={instance}", "-DCMAKE_SYSTEM_VERSION=10.0.19041.0"]
+    raise FileNotFoundError("Visual Studio 2022 or 2019 with CMake, v142 and SDK 10.0.19041.0 is required")
+
+
+def build_glfw(instances: list[Path], download: bool, *, rebuild: bool = False,
+               generator: str = "Visual Studio 16 2019") -> dict:
     manifest = STAGE / "manifest.json"
     if manifest.is_file() and not rebuild:
         previous = json.loads(manifest.read_text(encoding="utf-8"))["glfw"]
@@ -269,17 +279,11 @@ def build_glfw(instances: list[Path], download: bool, *, rebuild: bool = False) 
                 raise RuntimeError("Unexpected source archive path")
         package.extractall(source_parent)
     source = source_parent / "glfw-3.3.2"
-    tool = next((instance / "Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe"
-                 for instance in instances
-                 if (instance / "Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe").is_file()), None)
-    if tool is None:
-        raise FileNotFoundError("Installed VS2019 CMake component not found")
-    instance = next(instance for instance in instances if tool.is_relative_to(instance))
-    build = SOURCES / "build-vc142"
+    tool, selection = glfw_toolchain(instances, generator)
+    # Separate build trees avoid mixing CMake generators on machines with both IDEs.
+    build = SOURCES / f"build-vc142-vs{generator.split()[-1]}"
     commands = [
-        [str(tool), "-S", str(source), "-B", str(build), "-G", "Visual Studio 16 2019",
-         "-A", "x64", "-T", "v142", f"-DCMAKE_GENERATOR_INSTANCE={instance}",
-         "-DCMAKE_SYSTEM_VERSION=10.0.19041.0",
+        [str(tool), "-S", str(source), "-B", str(build), *selection,
          "-DBUILD_SHARED_LIBS=ON", "-DUSE_MSVC_RUNTIME_LIBRARY_DLL=ON",
          "-DGLFW_BUILD_EXAMPLES=OFF", "-DGLFW_BUILD_TESTS=OFF", "-DGLFW_BUILD_DOCS=OFF", "-DGLFW_INSTALL=OFF"],
         [str(tool), "--build", str(build), "--config", "Release", "--target", "glfw", "--parallel", "2"],
@@ -315,6 +319,7 @@ def build_glfw(instances: list[Path], download: bool, *, rebuild: bool = False) 
                 toolchain=dict(cmake_path=str(tool), cmake_sha256=sha256(tool),
                                compiler_configuration=dict(path=relative(compiler_record),
                                                            sha256=sha256(compiler_record)),
+                               generator=generator, platform_toolset="v142",
                                windows_sdk="10.0.19041.0", configuration="Release x64 /MD"),
                 commands=commands, logs=logs, license="third_party/glfw/GLFW-3.3.2-LICENSE.md")
 
@@ -383,11 +388,17 @@ def main() -> None:
     parser.add_argument("--check-bundle", type=Path, help="check native imports against the controlled CRT exports")
     args = parser.parse_args()
     if sys.platform != "win32" or ctypes.sizeof(ctypes.c_void_p) != 8:
-        raise RuntimeError("This source preparation requires Windows x64 / installed VS2019 and VS2022 Community")
-    instances = installed_visual_studio("[16.0,17.0)")
+        raise RuntimeError("This source preparation requires Windows x64 and Visual Studio C++ tools")
+    instances = installed_visual_studio("[17.0,18.0)")
+    generator = "Visual Studio 17 2022"
+    try:
+        glfw_toolchain(instances, generator)
+    except FileNotFoundError:
+        instances = installed_visual_studio("[16.0,17.0)")
+        generator = "Visual Studio 16 2019"
     STAGE.mkdir(parents=True, exist_ok=True)
-    runtime = stage_crt(installed_visual_studio("[17.0,18.0)"), args.download)
-    glfw = build_glfw(instances, args.download, rebuild=args.rebuild_glfw)
+    runtime = stage_crt(instances, args.download)
+    glfw = build_glfw(instances, args.download, rebuild=args.rebuild_glfw, generator=generator)
     report = dict(schema=1, minimum_windows="Windows 10 x64", vc14=runtime, glfw=glfw,
                   omit_bundled=("api-ms-win-*.dll", "ucrtbase.dll", "msvcr110.dll", "msvcr100.dll"),
                   redistribution_terms="third_party/microsoft/DOWNSTREAM-TERMS.md")
